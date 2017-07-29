@@ -11763,7 +11763,7 @@ div#notebook {
 <ul>
 <li>Name: Jubin Soni</li>
 <li>Udacity: DAND Nanodegree Project 3</li>
-<li>GitHub Link: https://github.com/jubins/DAND-Nanodegree/blob/master/dandp3-opensteetmap/Project/DANDP3_OpenStreetMap_JubinSoni.ipynb </li>
+<li><a href= "https://github.com/jubins/DAND-Nanodegree/blob/master/dandp3-opensteetmap/Project/DANDP3_OpenStreetMap_JubinSoni.ipynb">GitHub Link: DAND P3 Wrangle Open Street Map data</a> </li>
 </ul>
 </div>
 </div>
@@ -11775,7 +11775,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Map-Area">Map Area<a class="anchor-link" href="#Map-Area">&#182;</a></h3><p>New York, NY, United States</p>
 <ul>
-<li>Data Source: https://www.openstreetmap.org/relation/175905</li>
+<li>Data Source:<a href="https://www.openstreetmap.org/relation/175905"> https://www.openstreetmap.org/relation/175905</a></li>
 <li>This map is where I say so I am more interested in what this study reveals by querying the database. I would also like to contribute to its improvement on OpenStreetMap.org.</li>
 <li>The downloaded OSM file is 2.7GB in size and it is difficult to process so much data so first I have created a sample of 270MB from this file and used it for initial analysis.</li>
 </ul>
@@ -12385,16 +12385,24 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Future-prospects-and-Analysis">Future prospects and Analysis<a class="anchor-link" href="#Future-prospects-and-Analysis">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>After this review of the data it is obvious that the New York City area is very complete, and although I believe it has been well cleaned for the purposes of this exercise I think further cleaning the data will reveal more interesting insights. For example in the 'Top 10 Cuisines' one of the nodes_tags.value has multiple comma-separated value and in 'Top 10 contributors' the first field is blank. This shows that in the entire file there can be more such values and these minor corrections can be done. Also some more complicated analysis can be done using SQL like most occuring (worshipped) religion in OSM, and most active user.</p>
+<h4 id="More-ideas-about-performing-analysis-and-insights-on-the-dataset">More ideas about performing analysis and insights on the dataset<a class="anchor-link" href="#More-ideas-about-performing-analysis-and-insights-on-the-dataset">&#182;</a></h4><p>Some more complicated analysis can be performed on this dataset like:</p>
+<ul>
+<li>Most occuring (worshipped) religion in the NYC map.</li>
+<li>Most active user of the map.</li>
+<li>The busiest time windows in NYC.</li>
+<li>Top 5 shops in the NYC map.</li>
+</ul>
+<h4 id="Additional-Improvements-in-the-dataset">Additional Improvements in the dataset<a class="anchor-link" href="#Additional-Improvements-in-the-dataset">&#182;</a></h4><p>There are some issues in the dataset like:</p>
+<ul>
+<li>At some places in the OSM file the city, street, county, zip names are associated with tiger keyword as tiger might be the source and some are associated with cittracks. For example: citytracks:street, citytracks:zip, tiger: street, tiger:county, these problems create consistency issues when data is captured into SQL.<ul>
+<li>One solution can be to have these sources into different XML sub-section so that street, zip, county fields can be cleanly stored into CSV, then hence into SQL.</li>
+</ul>
+</li>
+<li>Although I believe dataset has been well cleaned for the purposes of this exercise I think further cleaning the data will reveal more interesting insights. For example in the 'Top 10 Cuisines' one of the nodes_tags.value has multiple comma-separated value and in 'Top 10 contributors' the first field is blank. This shows that in the entire file there can be more such values and these minor corrections can be done. However part of this problem lies in OSM dataset itself being inconsistent at some places.<ul>
+<li>Hence some more cleaning should be done and the inconsistencies in the OSM dataset should be removed.</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
@@ -12404,7 +12412,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h1>
+<h3 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12413,7 +12421,39 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It interests me to notice a fair amount of GPS data makes it into OpenStreetMap.org on account of users’ efforts, whether by scripting a map editing bot or otherwise. With a rough GPS data processor in place and working together with a more robust data processor similar to data.py and audit.py. I think it would be possible to input a great amount of cleaned, validated and corrected data to OpenStreetMap.org.</p>
+<ul>
+<li><p>After this review of the OSM data, it is obvious that the New York City area is very complete. It interests me to notice a fair amount of GPS data makes it into OpenStreetMap.org on account of users’ efforts, whether by scripting a map editing bot or otherwise.</p>
+<ul>
+<li><p>Benefits:</p>
+<ul>
+<li>The benefit of this is that more detailed map data is available.</li>
+<li>The data can be used for more capturing more meaningful and complicated insights.</li>
+</ul>
+</li>
+<li><p>Anticipated Issues:</p>
+<ul>
+<li>With the data being captured from bot, the bot script needs to be updated from time to time.</li>
+<li>More user involvement will be required in validation, correctness and completeness of information.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>With a rough GPS data processor in place and working together with a more robust data processor similar to data.py and audit.py. I think it would be possible to input a great amount of cleaned, validated and corrected data to OpenStreetMap.org.</p>
+<ul>
+<li><p>Benefits:</p>
+<ul>
+<li>A robust GPS data processor will give more cleaned, validated and rich OSM dataset.</li>
+<li>The data.py and audit.py data processing files will be easier to keep updated time to time as the details in map data changes or if more things need to be added in future.</li>
+</ul>
+</li>
+<li><p>Anticipated Issues:</p>
+<ul>
+<li>There will still be an issue if there are NULL values at some places in the dataset, hence contant validation will be required however this will not be major issue due to robust GPS data processor in place.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
