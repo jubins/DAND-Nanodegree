@@ -1,0 +1,140 @@
+---
+title: "lesson4"
+author: "jubin"
+date: "August 9, 2017"
+output: html_document
+---
+## Scatter Plots
+```{r}
+library(ggplot2)
+pf <- read.csv('pseudo_facebook.tsv', sep='\t')
+
+qplot(x = age, y = friend_count, data = pf)
+```
+
+```{r}
+library(ggplot2)
+ggplot(aes(x=age, y=friend_count), data=pf)+geom_point()
+```
+
+
+
+```{r}
+ggplot(aes(x = age, y = friend_count), data = pf) +
+  geom_jitter(alpha = 1/20) + 
+  xlim(13, 90)
+```
+
+```{r}
+ggplot(aes(x = age, y = friend_count), data = pf) +
+  geom_point(alpha = 1/20) + 
+  xlim(13, 90) +
+  coord_trans(y = "sqrt")
+?coord_trans
+```
+
+
+```{r}
+#Build up layers
+ggplot(aes(x = age, y = friend_count), data = pf) +
+  geom_point(alpha = 1/10, position = 'jitter')
+```
+
+```{r}
+#Build up layers
+ggplot(aes(x = age, y = friendships_initiated), data = pf) +
+  geom_jitter(alpha = 1/10, position = position_jitter(h = 0)) + 
+  coord_trans(y = 'sqrt')
+```
+
+```{r}
+#dplr package allows us to split up the dataframe and apply the function to some parts of the data
+library(dplyr)
+age_groups <- group_by(pf, age)
+pf.fc_by_age <- summarise(age_groups,
+          friend_count_mean = mean(friend_count),
+          friend_count_median = median(friend_count),
+          n = n())
+
+pf.fc_by_age <- arrange(pf.fc_by_age, age)
+
+head(pf.fc_by_age)
+```
+
+```{r}
+#Conditional Means Alternate Code
+library(dplyr)
+
+pf.fc_by_age <- pf %>%
+  group_by(age) %>%
+  summarise(friend_count_mean = mean(friend_count),
+            friend_count_median = median(friend_count),
+            n = n()) %>%
+  arrange(age)
+
+head(pf.fc_by_age)
+```
+
+```{r}
+ggplot(aes(age, friend_count_mean), data = pf.fc_by_age) +
+  geom_line()
+```
+
+```{r}
+#Overlaying Summaries with Raw Data
+ggplot(aes(x = age, y = friend_count), data = pf) + 
+  xlim(13, 90) +
+  geom_point(alpha = 0.05, position = position_jitter(h=0), color = 'orange') +
+  coord_trans(y = 'sqrt') +
+  geom_line(stat = 'summary', fun.y = mean) +
+  geom_line(stat = 'summary', fun.y = quantile, probs = .1, linetype = 2, color = 'blue') +
+  geom_line(stat = 'summary', fun.y = quantile, probs = .9, linetype = 2, color = 'blue')
+```
+
+```{r}
+#Overlaying Summaries with Raw Data
+ggplot(aes(x = age, y = friend_count), data = pf) + 
+  coord_cartesian(xlim = c(13, 70), ylim = c(0, 1000)) +
+  geom_point(alpha = 0.05, position = position_jitter(h=0), color = 'orange') +
+  coord_trans(y = 'sqrt') +
+  geom_line(stat = 'summary', fun.y = mean) +
+  geom_line(stat = 'summary', fun.y = quantile, probs = .1, linetype = 2, color = 'blue') +
+  geom_line(stat = 'summary', fun.y = quantile, probs = .9, linetype = 2, color = 'blue')
+```
+## Correlation
+```{r}
+cor(pf$age, pf$friend_count)
+```
+
+```{r}
+#Pearson correlation
+cor.test(pf$age, pf$friend_count, method = 'pearson')
+#A correlation of 0.0274 indicates that there is no meaningful correlation between the two variables.
+#Rule of thumb: A correlation>0.3 and correlation<-0.3 is meaningful. 
+#0.5 is moderate and 0.7 or greater is pretty large
+```
+
+```{r}
+with(subset(pf, age<=70), cor.test(age, friend_count))
+
+```
+
+```{r}
+#Spearman correlation is used for ranks
+with(subset(pf, age<=70), cor.test(age, friend_count, method = 'spearman'))
+
+```
+
+## Create Scatterplots
+```{r}
+ggplot(aes(x = www_likes_received, y = likes_received), data = pf) +
+  geom_point()
+```
+### Strong Correlations
+```{r}
+ggplot(aes(x = www_likes_received, y = likes_received), data = pf) +
+  geom_point() +
+  xlim(0, quantile(pf$www_likes_received, 0.95))
+```
+
+
