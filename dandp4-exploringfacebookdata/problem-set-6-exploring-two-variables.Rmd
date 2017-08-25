@@ -1,0 +1,86 @@
+---
+title: "problem-set6"
+author: "jubin"
+date: "August 24, 2017"
+output: html_document
+---
+
+### Quiz 1: price vs. x
+```{r}
+library(ggplot2)
+data("diamonds")
+ggplot(aes(x=price,y=x), data=diamonds)+
+  geom_point(alpa=0.1)
+```
+
+### Quiz 2: Findings - price vs. x
+```{r}
+'Relationship of X vs. Price is Exponential and there are several outliers.'
+```
+
+### Quiz 3: Correlations
+```{r}
+cor.test(diamonds$price,diamonds$x)
+cor.test(diamonds$price,diamonds$y)
+cor.test(diamonds$price,diamonds$z)
+```
+
+### Quiz 4: price vs. depth
+```{r}
+ggplot(aes(x=price,y=depth), data=diamonds)+
+  geom_point(alpa=0.1)
+```
+
+### Quiz 5: Adjustments - price vs. depth
+```{r}
+ggplot(data = diamonds, aes(x = depth, y = price)) + 
+  geom_point(alpha=0.01)+
+  scale_x_continuous(limits=c(50, 70), breaks=seq(50, 70, 2))
+```
+
+### Quiz 6: Typical Depth Range
+```{r}
+'Lower Limit: 58
+Upper Limit: 64'
+```
+
+### Quiz 7: Correlation - price and depth
+```{r}
+
+```
+
+### Quiz 8: price vs. carat
+```{r}
+```
+
+### Quiz 9: price vs. volume
+```{r}
+```
+
+### Quiz 10: Findings - price vs. volume
+```{r}
+```
+
+### Quiz 11: Correlations on Subsets
+```{r}
+```
+
+### Quiz 12: Adjustments - price vs. volume
+```{r}
+```
+
+### Quiz 13: Mean pice by clarity
+```{r}
+```
+
+### Quiz 14: Bar Charts of Mean Price
+```{r}
+```
+
+### Quiz 15: Trends in Mean Price
+```{r}
+```
+
+### Quiz 16: Gapminder Revisited
+```{r}
+```
