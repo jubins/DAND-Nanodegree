@@ -1,0 +1,23 @@
+---
+title: "ExploreAndSummarizeData"
+author: "jubin"
+date: "August 27, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Udacity Data Analyst Project 4
+```{r}
+#Loading all the packages
+library(ggplot2)
+library(grid)
+library(gridExtra)
+library(GGally)
+library(dplyr)
+library(tidyr)
+
+
+```
