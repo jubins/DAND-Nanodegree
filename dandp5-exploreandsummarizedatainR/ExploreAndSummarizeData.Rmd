@@ -10,14 +10,108 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Udacity Data Analyst Project 4
+
+### Loading all the packages
 ```{r}
-#Loading all the packages
 library(ggplot2)
 library(grid)
 library(gridExtra)
 library(GGally)
 library(dplyr)
 library(tidyr)
+```
 
+### Load the Data
+```{r}
+wine <- read.csv("wineQualityWhites.csv", row.names = NULL)
+```
+
+### Exploring the data set
+```{r}
+names(wine)
+str(wine)
+summary(wine)
+```
+### Univariate Analysis
+
+#### Structure of Dataset
+The dataset on white wines has 4898 observations of 13 variables. The main feature of interest is quality and alcohol content.
+
+Plotting quality of wine
+```{r}
+library(ggplot2)
+ggplot(aes(x = quality), data = wine) +
+  geom_histogram()
+```
+We see that the quality is close to a normal distribution, the graph is which is not fully symmetric because the quality 5 is higher than its corresponding value. However looking at the quality of 6 being highest we can say that the quality is above average.
+
+Histogram of fixed.acidity value of wine
+```{r}
+ggplot(aes(x = fixed.acidity), data = wine) + 
+  geom_histogram()
+```
+The histogram of acidity of potential shows normal distribution.
+
+Histogram of residual sugar
+```{r}
+ggplot(aes(x = residual.sugar), data = wine) +
+  geom_histogram() +
+  scale_x_log10()
+```
+The histogram of residual sugar shows that as the count of sugar in whitewine does not follow any standard distribution. It has low peaks at left and right and low peak in the middle of distribution.
+
+Histogram of Sulpur dioxide
+```{r}
+ggplot(aes(x = total.sulfur.dioxide), data = wine) +
+  geom_histogram()
+```
+The histogram of Sulfur Dioxide shows normal distribution in the White wine.
+
+Plotting pH of wine
+```{r}
+ggplot(aes(x = pH), data = wine) +
+  geom_histogram()
+```
+The pH is very narrow for White Wine between 2.7 to 3.8, so it seems like these values are within the acidity range and no alkaline (which is above 7)
+
+Checking Wine Density
+```{r}
+ggplot(aes(x = density), data = subset(wine, density<1.01)) +
+  geom_histogram(binwidth = 0.001)
+```
+The distribution shows that density is within 0.9 to 1.0 range.
+
+#### Univariate Analysis Questions and Findings
+What other features in the dataset do you think will help support your investigation into your feature(s) of interest?
+I think further investigation weather pH could be classified into categorial (acid, base, neutral) could potentially be of interest. Also the relationship between fixed.acidity, volatile.acidity, and citric.acid (in particular this one due to the large number of 0s) could be interesting to further investigate in order to understand if the values are properly reported. This would require to understand the theoretical relationship between these variables.
+
+Did you create any new variables from existing variables in the dataset?
+I only created the variable (ordered factor) rating to classify wine as good, bad or average. The information that the other variables store there does not seem to be any other variable that would fit well a sub-classification into categorical variables, perhaps with the exception of residual pH (neutral, base, acid).
+
+Of the features you investigated, were there any unusual distributions?
+I created Boxplots in Bivariate analysis to gain a better understanding wrt. outliers (except for X for being an index, and quality for being categorical). I've also plotted the data using a log10 scale in Univariate analysis (I plotted for all variables, although only those with long tails are interesting for the log10 scale -- plots below the box plots). These plots have shown that fixed acidity and to some extent pH, chlorides, densitiy, sulphates, volatile acidity to follow a normal distribution. As for the acidity variables, this is aligned with the fact that pH seems to be normally distributed, apart from the citric acid. The reason for the latter might be the number of 0 (potentially non-responses) discussed earlier. pH is normally distribution which suggests that the data is good, since by definition it is a measure of acidity and is on a logarithmic scale.
+
+Did you perform any operations on the data to tidy, adjust, or change the form of the data? If so, why did you do this?
+I've not found the need to tidy, adjust, or change the form of the data.
+
+### Bivariate Analysis
+Let us check how is the distribution of quality and alcohol content in wine. To do this creating a new variable alcohol.bucket.
+```{r}
+wine$alcohol.bucket <- cut(wine$alcohol, c(8,9,10,11,12,13,14))
+qplot(x = alcohol.bucket, y= quality, data = wine, geom = 'boxplot')
+```
+The graphs shows us that alcohol and wine quality have clear correlation.
+
+Scatterplot of quality and Sulfur.Dioxide
+```{r}
+ggplot(aes(x=quality, y=total.sulfur.dioxide), data=wine)+
+  geom_jitter(alpha=1/6)
+```
+This plot shows that in white wine quality of 5,6,7 has majority of Sulfur.Dioxide in it.
+
+
+```{r}
 
 ```
+
+
