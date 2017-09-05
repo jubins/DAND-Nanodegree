@@ -5,9 +5,13 @@ date: "August 27, 2017"
 output: html_document
 ---
 
-```{r setup, include=FALSE, message=FALSE, warning=FALSE, echo=FALSE, packages}
+```{r}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+#### In this project I have performed Exploratory Data Analysis on the White wine dataset. In this dataset the wine quality is of particular interest to me. I have performed Univariate, Bivariate and Multivariate analysis and explored various factors that affect and correlate with the wine quality.
+
+GitHub Link: <a href='https://github.com/jubins/DAND-Nanodegree/blob/master/dandp5-exploreandsummarizedatainR/Udacity%20DAND%20Project_%20ExploreAndSummarizeData.pdf'>EDA: Univariate, Bivariate and Multivariate Analysis on White Wine Dataset</a>
 
 ## Loading all the packages
 ```{r}
@@ -82,6 +86,18 @@ ggplot(aes(x = density), data = subset(wine, density<1.01)) +
 ```
 
 The distribution below shows that density is within 0.9 to 1.0 range.
+
+### Outliers
+```{r}
+grid.arrange(ggplot(wine, aes(x=1, y=residual.sugar))+
+               geom_jitter(alpha=0.1)+
+               geom_boxplot(alpha=0.2, color='red'),
+             ggplot(wine, aes(x=residual.sugar))+
+               geom_histogram(bins=30), ncol=2
+             )
+```
+
+We see there is unusual distrbution of 1s of the residual.sugar in the dataset.
 
 ### Univariate Analysis Questions and Findings
 #### What other features in the dataset do you think will help support your investigation into your feature(s) of interest?
@@ -199,7 +215,7 @@ plotRating(wine$volatile.acidity, wine$citric.acid, 'volatile acidity',
 plotRating(wine$pH, wine$alcohol, 'pH', 'alcohol')
 ```
 
-The pH and alcohol also have similar relationship as sulphates and alcohol. Majority of the wines have good rating where alcohol content is higher, and bad rating where alcohol content is lower, eventhough pH is fairly constant in both cases.
+In the plots above, Sulphates an Citric.Acid, Sulphates and Volatile.Acidity we see a good number are rated as average and there is mix of good and bad ratings so we cannot infer anything. The pH and Alcohol relationship shows that similar to Sulphates and Alcohol, majority of the wines have good rating where alcohol content is higher, and bad rating where alcohol content is lower, eventhough pH is fairly constant in both cases. And Higher Volatile.Acidity is causes the wine quality to decrease as with it the Citric.Acid increases.
 
 ```{r}
 ggplot(aes(x=alcohol, y=residual.sugar, color = factor(quality)), data=wine)+
