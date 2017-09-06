@@ -323,7 +323,7 @@ grid.arrange(ggplot(data=wine, aes(x=factor(quality), y=fixed.acidity))+
 ### Plot Two
 These plots show the effect of alcohol on wine quality. On avergae, we observe that the wine quality increases with alcohol, except for wine quality 5. To futher understand the difference between quality 4 and 5, I computed the stats considering only wines with that rating.
 ```{r}
-ggplot(data=wine, aes(x=quality, y=alcohol))+
+ggplot(data=wine, aes(x=factor(quality), y=alcohol))+
   geom_boxplot()+
   ggtitle('Alcohol Levels in Different Wine Qualities')+
   xlab('Quality')+
@@ -349,7 +349,8 @@ This boxplot shows the correlation between quality and residual sugar vs. alcoho
 ggplot(data=wine, aes(x=residual.sugar, y=alcohol))+
   facet_wrap(~rating) +
   geom_jitter(alpha=0.3)+
-  geom_boxplot(alpha=0.5, color='blue')+
+  geom_point() +
+  #geom_boxplot(alpha=0.5, color='blue')+
   xlab('Residual sugar (g/dm^3)')+
   ylab('Alcohol (% volume)') +
   ggtitle('residual sugar vs. alcohol correlation by quality')
