@@ -11762,7 +11762,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <li>Author: Jubin Soni</li>
 <li>Data Analyst Nanodegree Machine Learning Project</li>
-<li><a>GitHub Link</a></li>
+<li><a href='http://htmlpreview.github.io/?https://github.com/jubins/DAND-Nanodegree/blob/master/dandp7-ML-Identify-Fraud-From-Enron-Emails/MachineLearningProject_JubinSoni.html'>GitHub Link</a></li>
 </div>
 </div>
 </div>
@@ -11810,7 +11810,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Task-1:-Select-what-features-you'll-use.">Task 1: Select what features you'll use.<a class="anchor-link" href="#Task-1:-Select-what-features-you'll-use.">&#182;</a></h4>
+<h3 id="Task-1:-Select-what-features-you'll-use.">Task 1: Select what features you'll use.<a class="anchor-link" href="#Task-1:-Select-what-features-you'll-use.">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11833,7 +11833,9 @@ div#notebook {
 
 <span class="c1">### features_list is a list of strings, each of which is a feature name.</span>
 <span class="c1">### The first feature must be &quot;poi&quot;.</span>
-<span class="n">features_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;poi&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">,</span> <span class="s1">&#39;exercised_stock_options&#39;</span><span class="p">,</span> <span class="s1">&#39;expenses&#39;</span><span class="p">,</span> <span class="s1">&#39;total_payments&#39;</span><span class="p">,</span> <span class="s1">&#39;total_stock_value&#39;</span><span class="p">]</span>
+<span class="n">features_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;poi&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">,</span> <span class="s1">&#39;to_messages&#39;</span><span class="p">,</span> <span class="s1">&#39;deferral_payments&#39;</span><span class="p">,</span> <span class="s1">&#39;total_payments&#39;</span><span class="p">,</span> <span class="s1">&#39;exercised_stock_options&#39;</span><span class="p">,</span> <span class="s1">&#39;bonus&#39;</span><span class="p">,</span> <span class="s1">&#39;restricted_stock&#39;</span><span class="p">,</span> <span class="s1">&#39;other&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;shared_receipt_with_poi&#39;</span><span class="p">,</span> <span class="s1">&#39;restricted_stock_deferred&#39;</span><span class="p">,</span> <span class="s1">&#39;total_stock_value&#39;</span><span class="p">,</span> <span class="s1">&#39;expenses&#39;</span><span class="p">,</span> <span class="s1">&#39;loan_advances&#39;</span><span class="p">,</span> <span class="s1">&#39;from_messages&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;from_this_person_to_poi&#39;</span><span class="p">,</span> <span class="s1">&#39;director_fees&#39;</span><span class="p">,</span> <span class="s1">&#39;deferred_income&#39;</span><span class="p">,</span> <span class="s1">&#39;long_term_incentive&#39;</span><span class="p">,</span> <span class="s1">&#39;from_poi_to_this_person&#39;</span><span class="p">]</span>
 
 <span class="c1">### Load the dictionary containing the dataset</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;final_project_dataset.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
@@ -12551,7 +12553,7 @@ I have converted NaN to 0, to make all the values numeric and train the machine 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Task-2:-Remove-outliers">Task 2: Remove outliers<a class="anchor-link" href="#Task-2:-Remove-outliers">&#182;</a></h4><p>Visualization is one of the most powerful tools for finding outliers. Upon plotting salary against bonus, there is an outlier that pops out immediately - 'Total'. The spreadsheet added up all the data points for us and we need to take this point out. Upon closer examination, I found one more entry which is not the name of a real person 'The Travel Agency In The Park'. The entry is dropped from the dataset. The entries which have all the features as 'NaN' are also dropped from the dataset.</p>
+<h3 id="Task-2:-Remove-outliers">Task 2: Remove outliers<a class="anchor-link" href="#Task-2:-Remove-outliers">&#182;</a></h3><p>Visualization is one of the most powerful tools for finding outliers. Upon plotting salary against bonus, there is an outlier that pops out immediately - 'Total'. The spreadsheet added up all the data points for us and we need to take this point out. Upon closer examination, I found one more entry which is not the name of a real person 'The Travel Agency In The Park'. The entry is dropped from the dataset. The entries which have all the features as 'NaN' are also dropped from the dataset.</p>
 
 </div>
 </div>
@@ -12616,7 +12618,7 @@ I have converted NaN to 0, to make all the values numeric and train the machine 
 <div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~jubinsoni/44.embed" height="525px" width="100%"></iframe>
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~jubinsoni/92.embed" height="525px" width="100%"></iframe>
 </div>
 
 </div>
@@ -12676,7 +12678,7 @@ I have converted NaN to 0, to make all the values numeric and train the machine 
 <div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~jubinsoni/46.embed" height="525px" width="100%"></iframe>
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~jubinsoni/94.embed" height="525px" width="100%"></iframe>
 </div>
 
 </div>
@@ -12690,8 +12692,8 @@ I have converted NaN to 0, to make all the values numeric and train the machine 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Task-3:-Create-new-feature(s)">Task 3: Create new feature(s)<a class="anchor-link" href="#Task-3:-Create-new-feature(s)">&#182;</a></h3><h4 id="Feature-Engineering">Feature Engineering<a class="anchor-link" href="#Feature-Engineering">&#182;</a></h4><p>In the Task 1, I have already selected some features of interest. First I will focus on the Feature Engineering and then Feature Selection.
-Feature engineering involves using human intuition to hypothesize what feature might contain pattern that can be exploited using machine learning, coding up the new feature, visualizing and repeating the process again. Our hypothesis here - "POI's sent email to each other at a rate higher than for Non-POI's". I coded up two new features: fraction of emails this person sends to poi (fraction_from_poi) and fraction of emails this person sends to poi (fraction_to_poi).</p>
+<h4 id="Splitting-the-dataset-into-training-and-test">Splitting the dataset into training and test<a class="anchor-link" href="#Splitting-the-dataset-into-training-and-test">&#182;</a></h4><p>A classic mistake is to evaluate the performance of an algorithm on the same dataset it was trained on. It will make our algorithm perform better than it actually does. However, we will have no idea how our algorithm performs on unseen data.</p>
+<p>It is essential practice in data mining procedures to keep a subset of data as holdout data- test data. We train our model on training data and examine the generalization performance of the model on the test data. We hide the label for target variable of the test data from the model and let the model predict the values for target variable. Then we compare the values predicted by the model with the hidden true values. We can also use a more sophisticated holdout training and testing procedure called cross-validation. In the later sections of this report, I have used a variation of cross-validation called StratifiedShuffleSplit which makes randomly chosen training and test sets multiple times and averages results of overall tests</p>
 
 </div>
 </div>
@@ -12699,6 +12701,106 @@ Feature engineering involves using human intuition to hypothesize what feature m
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">### Store to my_dataset for easy export below.</span>
+<span class="n">my_dataset</span> <span class="o">=</span> <span class="n">enron_data</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+
+<span class="c1">#Initial list of features</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">featureFormat</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">,</span> <span class="n">features_list</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">labels</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="n">targetFeatureSplit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1">#Splitting dataset into training and test</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="n">features_train</span><span class="p">,</span> <span class="n">features_test</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">,</span> <span class="n">labels_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Implementing-few-classifiers-before-Feature-Selection-and-Feature-Engineering">Implementing few classifiers before Feature Selection and Feature Engineering<a class="anchor-link" href="#Implementing-few-classifiers-before-Feature-Selection-and-Feature-Engineering">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="n">nb</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">nb</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features_train</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">)</span>
+<span class="n">nb_labels_predicted</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
+<span class="n">nb_accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">nb_labels_predicted</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;NaiveBayes accuracy score: {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nb_accuracy</span><span class="p">))</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+<span class="n">svm</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">()</span>
+<span class="n">svm</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features_train</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">)</span>
+<span class="n">svm_labels_predicted</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
+<span class="n">svm_accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">svm_labels_predicted</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;SVM accuracy score: {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">svm_accuracy</span><span class="p">))</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">AdaBoostClassifier</span>
+<span class="n">adaboost</span> <span class="o">=</span> <span class="n">AdaBoostClassifier</span><span class="p">()</span>
+<span class="n">adaboost</span> <span class="o">=</span> <span class="n">adaboost</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features_train</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">)</span>
+<span class="n">adaboost_labels_predicted</span> <span class="o">=</span> <span class="n">adaboost</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
+<span class="n">adaboost_accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">adaboost_labels_predicted</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;AdaBoost accuracy score: {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">adaboost_accuracy</span><span class="p">))</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">()</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features_train</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">)</span>
+<span class="n">knn_labels_predicted</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
+<span class="n">knn_accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">knn_labels_predicted</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;KNearestNeighbors accuracy score: {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">knn_accuracy</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>NaiveBayes accuracy score: 0.883720930233.
+SVM accuracy score: 0.883720930233.
+AdaBoost accuracy score: 0.790697674419.
+KNearestNeighbors accuracy score: 0.883720930233.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Task-3:-Create-new-feature(s)">Task 3: Create new feature(s)<a class="anchor-link" href="#Task-3:-Create-new-feature(s)">&#182;</a></h3><h4 id="Feature-Engineering">Feature Engineering<a class="anchor-link" href="#Feature-Engineering">&#182;</a></h4><p>In the Task 1, I have selected some features of interest. In Task 2, I removed the outliers and implemented few classifiers based on these initially selected features. In this task first I will focus on the Feature Engineering and then Feature Selection.
+Feature engineering involves using human intuition to hypothesize what feature might contain pattern that can be exploited using machine learning, coding up the new feature, visualizing and repeating the process again. Our hypothesis here - "POI's sent email to each other at a rate higher than for Non-POI's". I coded up two new features: fraction of emails this person sends to poi (fraction_from_poi) and fraction of emails this person sends to poi (fraction_to_poi).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Creating new feature(s)</span>
@@ -12717,7 +12819,7 @@ Feature engineering involves using human intuition to hypothesize what feature m
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">show</span>
@@ -12769,7 +12871,7 @@ Feature engineering involves using human intuition to hypothesize what feature m
 
     <div class="bk-root">
         <a href="http://bokeh.pydata.org" target="_blank" class="bk-logo bk-logo-small bk-logo-notebook"></a>
-        <span id="7a13192c-28f5-41cf-a91e-eaa08d5bb1da">Loading BokehJS ...</span>
+        <span id="50ac5184-a40b-44b4-b704-27034b61e7e4">Loading BokehJS ...</span>
     </div>
 </div>
 
@@ -12779,10 +12881,10 @@ Feature engineering involves using human intuition to hypothesize what feature m
 
 
 
-<div id="f4c29733-4be7-4b14-a308-31abaa2d6cb1"></div>
+<div id="ffc7d952-04ee-4e69-b617-940a92d7b810"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
+var element = $('#ffc7d952-04ee-4e69-b617-940a92d7b810');
 
 (function(global) {
   function now() {
@@ -12821,7 +12923,7 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
 
   function display_loaded() {
     if (window.Bokeh !== undefined) {
-      document.getElementById("7a13192c-28f5-41cf-a91e-eaa08d5bb1da").textContent = "BokehJS successfully loaded.";
+      document.getElementById("50ac5184-a40b-44b4-b704-27034b61e7e4").textContent = "BokehJS successfully loaded.";
     } else if (Date.now() < window._bokeh_timeout) {
       setTimeout(display_loaded, 100)
     }
@@ -12863,9 +12965,9 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
       console.log("Bokeh: injecting script tag for BokehJS library: ", url);
       document.getElementsByTagName("head")[0].appendChild(s);
     }
-  };var element = document.getElementById("7a13192c-28f5-41cf-a91e-eaa08d5bb1da");
+  };var element = document.getElementById("50ac5184-a40b-44b4-b704-27034b61e7e4");
   if (element == null) {
-    console.log("Bokeh: ERROR: autoload.js configured with elementid '7a13192c-28f5-41cf-a91e-eaa08d5bb1da' but no matching script tag was found. ")
+    console.log("Bokeh: ERROR: autoload.js configured with elementid '50ac5184-a40b-44b4-b704-27034b61e7e4' but no matching script tag was found. ")
     return false;
   }
 
@@ -12878,7 +12980,7 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
     
     function(Bokeh) {
       
-      document.getElementById("7a13192c-28f5-41cf-a91e-eaa08d5bb1da").textContent = "BokehJS is loading...";
+      document.getElementById("50ac5184-a40b-44b4-b704-27034b61e7e4").textContent = "BokehJS is loading...";
     },
     function(Bokeh) {
       console.log("Bokeh: injecting CSS: https://cdn.pydata.org/bokeh/release/bokeh-0.12.4.min.css");
@@ -12901,7 +13003,7 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
       console.log("Bokeh: BokehJS failed to load within specified timeout.");
       window._bokeh_failed_load = true;
     } else if (force !== true) {
-      var cell = $(document.getElementById("7a13192c-28f5-41cf-a91e-eaa08d5bb1da")).parents('.cell').data().cell;
+      var cell = $(document.getElementById("50ac5184-a40b-44b4-b704-27034b61e7e4")).parents('.cell').data().cell;
       cell.output_area.append_execute_result(NB_LOAD_WARNING)
     }
 
@@ -12928,7 +13030,7 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
 
 
     <div class="bk-root">
-        <div class="bk-plotdiv" id="be5748e3-d41a-4004-9dce-9529062df0cf"></div>
+        <div class="bk-plotdiv" id="f5005dce-f1dd-469c-b74f-a276d04d3302"></div>
     </div>
 <script type="text/javascript">
   
@@ -12969,7 +13071,7 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
   
     function display_loaded() {
       if (window.Bokeh !== undefined) {
-        document.getElementById("be5748e3-d41a-4004-9dce-9529062df0cf").textContent = "BokehJS successfully loaded.";
+        document.getElementById("f5005dce-f1dd-469c-b74f-a276d04d3302").textContent = "BokehJS successfully loaded.";
       } else if (Date.now() < window._bokeh_timeout) {
         setTimeout(display_loaded, 100)
       }
@@ -13011,9 +13113,9 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
         console.log("Bokeh: injecting script tag for BokehJS library: ", url);
         document.getElementsByTagName("head")[0].appendChild(s);
       }
-    };var element = document.getElementById("be5748e3-d41a-4004-9dce-9529062df0cf");
+    };var element = document.getElementById("f5005dce-f1dd-469c-b74f-a276d04d3302");
     if (element == null) {
-      console.log("Bokeh: ERROR: autoload.js configured with elementid 'be5748e3-d41a-4004-9dce-9529062df0cf' but no matching script tag was found. ")
+      console.log("Bokeh: ERROR: autoload.js configured with elementid 'f5005dce-f1dd-469c-b74f-a276d04d3302' but no matching script tag was found. ")
       return false;
     }
   
@@ -13023,8 +13125,8 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
       function(Bokeh) {
         (function() {
           var fn = function() {
-            var docs_json = {"160b0b77-0641-4606-a5b4-b64df3d6fb54":{"roots":{"references":[{"attributes":{"axis_label":"fraction of emails this person sends to POI","formatter":{"id":"fdca220f-e968-4b1c-9380-d5a766b6b1ea","type":"BasicTickFormatter"},"plot":{"id":"b811f9d4-d879-41d9-bf19-fff982829d88","subtype":"Figure","type":"Plot"},"ticker":{"id":"8dbd3ca7-900c-4fa1-b0b0-c814052f8584","type":"BasicTicker"}},"id":"2fb3fca2-23d5-4df6-acf2-d004cb183aaf","type":"LinearAxis"},{"attributes":{"callback":null},"id":"27e8b119-47e4-48ba-bbf8-07651dd5b35c","type":"DataRange1d"},{"attributes":{},"id":"d31274a9-d950-4989-9797-db4eca0c936c","type":"BasicTickFormatter"},{"attributes":{"plot":{"id":"b811f9d4-d879-41d9-bf19-fff982829d88","subtype":"Figure","type":"Plot"}},"id":"79eeb9af-50b1-459b-a658-5b2e193fa39b","type":"WheelZoomTool"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"3141e696-af0e-4ca4-8ee4-4f2ec1954720","type":"BoxAnnotation"},{"attributes":{"data_source":{"id":"1cd2015a-e697-41cd-9008-22323403ed6b","type":"ColumnDataSource"},"glyph":{"id":"d413963b-121d-429a-a0bd-06e06ab4ba47","type":"Circle"},"hover_glyph":null,"nonselection_glyph":{"id":"0624e459-eb4c-455f-b384-8a0ce9f351be","type":"Circle"},"selection_glyph":null},"id":"e91136c2-465e-4dd0-95a0-cae4067281f2","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"size":{"units":"screen","value":10},"x":{"field":"x1"},"y":{"field":"y1"}},"id":"105d46b4-b555-482e-b13a-27d91c53457e","type":"Circle"},{"attributes":{"plot":{"id":"ff267e86-3e7d-4eb2-8914-b8eb520afa87","subtype":"Figure","type":"Plot"}},"id":"495db36c-a265-41aa-b9bb-6f1125694bc6","type":"ResetTool"},{"attributes":{"plot":{"id":"ff267e86-3e7d-4eb2-8914-b8eb520afa87","subtype":"Figure","type":"Plot"},"ticker":{"id":"966414e4-9fe3-4cab-acab-b4eefa20b2ae","type":"BasicTicker"}},"id":"b1dc9611-25a7-46b7-8135-7329c88dc0c4","type":"Grid"},{"attributes":{"callback":null},"id":"d47e77ec-de90-4291-9f33-3eec52e14ba1","type":"DataRange1d"},{"attributes":{"fill_alpha":{"value":0.5},"fill_color":{"field":"color"},"line_alpha":{"value":0.5},"line_color":{"field":"color"},"size":{"units":"screen","value":10},"x":{"field":"x2"},"y":{"field":"y2"}},"id":"d413963b-121d-429a-a0bd-06e06ab4ba47","type":"Circle"},{"attributes":{"plot":null,"text":""},"id":"cdac1001-e0c9-4537-bc31-1dd31d4036f8","type":"Title"},{"attributes":{},"id":"fdca220f-e968-4b1c-9380-d5a766b6b1ea","type":"BasicTickFormatter"},{"attributes":{"plot":null,"text":""},"id":"c7e4035e-ef7d-4ee4-a52a-2679f813240e","type":"Title"},{"attributes":{"dimension":1,"plot":{"id":"ff267e86-3e7d-4eb2-8914-b8eb520afa87","subtype":"Figure","type":"Plot"},"ticker":{"id":"87c85f34-93cb-4c46-854b-fd04f345ab5d","type":"BasicTicker"}},"id":"8894f4d2-2a88-4066-9cde-fc7a8631739c","type":"Grid"},{"attributes":{},"id":"3ebe8b38-18b2-405b-8a11-03b40c9296e8","type":"BasicTicker"},{"attributes":{"plot":{"id":"b811f9d4-d879-41d9-bf19-fff982829d88","subtype":"Figure","type":"Plot"}},"id":"0a545fd1-83c3-465c-8df9-6ec11b13f2e9","type":"ResetTool"},{"attributes":{"plot":{"id":"ff267e86-3e7d-4eb2-8914-b8eb520afa87","subtype":"Figure","type":"Plot"}},"id":"60e218d2-2d9a-4afc-ab3d-1b4f14e5c1fe","type":"SaveTool"},{"attributes":{},"id":"262631e1-7e80-4368-8368-30da37fdaea5","type":"BasicTickFormatter"},{"attributes":{"items":[{"id":"b9d2eccb-096b-428c-b8b8-210b2bf39482","type":"LegendItem"}],"plot":{"id":"b811f9d4-d879-41d9-bf19-fff982829d88","subtype":"Figure","type":"Plot"}},"id":"7c140505-ca3b-407f-bae9-e8a22ecb9308","type":"Legend"},{"attributes":{},"id":"87c85f34-93cb-4c46-854b-fd04f345ab5d","type":"BasicTicker"},{"attributes":{"axis_label":"no. of emails from this person to POI","formatter":{"id":"6a0ea0a5-931c-4e0c-9fa9-be56288e1b5d","type":"BasicTickFormatter"},"plot":{"id":"ff267e86-3e7d-4eb2-8914-b8eb520afa87","subtype":"Figure","type":"Plot"},"ticker":{"id":"87c85f34-93cb-4c46-854b-fd04f345ab5d","type":"BasicTicker"}},"id":"49cffc60-82ff-497c-a248-e4fe68d37443","type":"LinearAxis"},{"attributes":{"active_drag":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"b455056b-d9c2-408a-ac78-81e5757aa6fb","type":"PanTool"},{"id":"79eeb9af-50b1-459b-a658-5b2e193fa39b","type":"WheelZoomTool"},{"id":"13e4836d-bac9-47e7-9a70-bc2f7fc1ccd0","type":"BoxZoomTool"},{"id":"1d7dfc59-aaf7-4fb3-b531-e281d2629260","type":"SaveTool"},{"id":"0a545fd1-83c3-465c-8df9-6ec11b13f2e9","type":"ResetTool"},{"id":"e392b639-8d28-4548-a059-72dbc7d94a20","type":"HelpTool"}]},"id":"636f6919-404f-4fcf-ae98-7e1e353c7889","type":"Toolbar"},{"attributes":{"dimension":1,"plot":{"id":"b811f9d4-d879-41d9-bf19-fff982829d88","subtype":"Figure","type":"Plot"},"ticker":{"id":"8dbd3ca7-900c-4fa1-b0b0-c814052f8584","type":"BasicTicker"}},"id":"43b59d42-7208-4461-bd77-b4825d639509","type":"Grid"},{"attributes":{"overlay":{"id":"3141e696-af0e-4ca4-8ee4-4f2ec1954720","type":"BoxAnnotation"},"plot":{"id":"b811f9d4-d879-41d9-bf19-fff982829d88","subtype":"Figure","type":"Plot"}},"id":"13e4836d-bac9-47e7-9a70-bc2f7fc1ccd0","type":"BoxZoomTool"},{"attributes":{"below":[{"id":"d5f6ef5c-7e72-49fa-b100-8c19f02c71b1","type":"LinearAxis"}],"left":[{"id":"49cffc60-82ff-497c-a248-e4fe68d37443","type":"LinearAxis"}],"plot_height":400,"plot_width":450,"renderers":[{"id":"d5f6ef5c-7e72-49fa-b100-8c19f02c71b1","type":"LinearAxis"},{"id":"b1dc9611-25a7-46b7-8135-7329c88dc0c4","type":"Grid"},{"id":"49cffc60-82ff-497c-a248-e4fe68d37443","type":"LinearAxis"},{"id":"8894f4d2-2a88-4066-9cde-fc7a8631739c","type":"Grid"},{"id":"e4a25ac6-2952-4bb2-a2a4-b92ea7faf173","type":"BoxAnnotation"},{"id":"f35a9b55-53ca-4bac-bc6c-8a4c45b7be76","type":"Legend"},{"id":"93a963df-66fb-4cbd-b66e-ac8e1ce69473","type":"GlyphRenderer"}],"title":{"id":"cdac1001-e0c9-4537-bc31-1dd31d4036f8","type":"Title"},"tool_events":{"id":"29220bd5-da92-470e-8109-3d1c375ff0a5","type":"ToolEvents"},"toolbar":{"id":"a3df2c2d-69ae-4e32-a34e-62e08afca749","type":"Toolbar"},"x_range":{"id":"36440716-2130-4400-b2c5-e2eb9c9f88dd","type":"DataRange1d"},"y_range":{"id":"27e8b119-47e4-48ba-bbf8-07651dd5b35c","type":"DataRange1d"}},"id":"ff267e86-3e7d-4eb2-8914-b8eb520afa87","subtype":"Figure","type":"Plot"},{"attributes":{"plot":{"id":"ff267e86-3e7d-4eb2-8914-b8eb520afa87","subtype":"Figure","type":"Plot"}},"id":"27f6cf80-11e6-4aa5-817a-88040b6be40e","type":"WheelZoomTool"},{"attributes":{"axis_label":"fraction of emails this person gets from POI","formatter":{"id":"d31274a9-d950-4989-9797-db4eca0c936c","type":"BasicTickFormatter"},"plot":{"id":"b811f9d4-d879-41d9-bf19-fff982829d88","subtype":"Figure","type":"Plot"},"ticker":{"id":"3ebe8b38-18b2-405b-8a11-03b40c9296e8","type":"BasicTicker"}},"id":"d37b8ec8-eaa0-4208-94bb-0fc036f918df","type":"LinearAxis"},{"attributes":{"label":{"field":"label"},"renderers":[{"id":"93a963df-66fb-4cbd-b66e-ac8e1ce69473","type":"GlyphRenderer"}]},"id":"7dd7836f-6c1d-4ebf-b74a-9adcebd4128e","type":"LegendItem"},{"attributes":{"children":[{"id":"ff267e86-3e7d-4eb2-8914-b8eb520afa87","subtype":"Figure","type":"Plot"},{"id":"b811f9d4-d879-41d9-bf19-fff982829d88","subtype":"Figure","type":"Plot"}]},"id":"cfac4550-bf44-4c08-b23b-9dcc0bc472b2","type":"Row"},{"attributes":{"items":[{"id":"7dd7836f-6c1d-4ebf-b74a-9adcebd4128e","type":"LegendItem"}],"plot":{"id":"ff267e86-3e7d-4eb2-8914-b8eb520afa87","subtype":"Figure","type":"Plot"}},"id":"f35a9b55-53ca-4bac-bc6c-8a4c45b7be76","type":"Legend"},{"attributes":{"plot":{"id":"b811f9d4-d879-41d9-bf19-fff982829d88","subtype":"Figure","type":"Plot"},"ticker":{"id":"3ebe8b38-18b2-405b-8a11-03b40c9296e8","type":"BasicTicker"}},"id":"35e01c8f-12cc-439e-ab18-9c5949b71b32","type":"Grid"},{"attributes":{"plot":{"id":"ff267e86-3e7d-4eb2-8914-b8eb520afa87","subtype":"Figure","type":"Plot"}},"id":"b46770b2-34ea-4498-a9d1-e06ca8d00f73","type":"HelpTool"},{"attributes":{"callback":null},"id":"36440716-2130-4400-b2c5-e2eb9c9f88dd","type":"DataRange1d"},{"attributes":{"label":{"field":"label"},"renderers":[{"id":"e91136c2-465e-4dd0-95a0-cae4067281f2","type":"GlyphRenderer"}]},"id":"b9d2eccb-096b-428c-b8b8-210b2bf39482","type":"LegendItem"},{"attributes":{"callback":null},"id":"ff22babc-152c-4421-88b3-d31fdbc840b3","type":"DataRange1d"},{"attributes":{"plot":{"id":"ff267e86-3e7d-4eb2-8914-b8eb520afa87","subtype":"Figure","type":"Plot"}},"id":"6d0baec6-f077-4ec2-9fa9-0ff69bff0eaa","type":"PanTool"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"e4a25ac6-2952-4bb2-a2a4-b92ea7faf173","type":"BoxAnnotation"},{"attributes":{"fill_alpha":{"value":0.5},"fill_color":{"field":"color"},"line_alpha":{"value":0.5},"line_color":{"field":"color"},"size":{"units":"screen","value":10},"x":{"field":"x1"},"y":{"field":"y1"}},"id":"678d72d7-fef4-4b83-aea0-f15be0d3be85","type":"Circle"},{"attributes":{"below":[{"id":"d37b8ec8-eaa0-4208-94bb-0fc036f918df","type":"LinearAxis"}],"left":[{"id":"2fb3fca2-23d5-4df6-acf2-d004cb183aaf","type":"LinearAxis"}],"plot_height":400,"plot_width":450,"renderers":[{"id":"d37b8ec8-eaa0-4208-94bb-0fc036f918df","type":"LinearAxis"},{"id":"35e01c8f-12cc-439e-ab18-9c5949b71b32","type":"Grid"},{"id":"2fb3fca2-23d5-4df6-acf2-d004cb183aaf","type":"LinearAxis"},{"id":"43b59d42-7208-4461-bd77-b4825d639509","type":"Grid"},{"id":"3141e696-af0e-4ca4-8ee4-4f2ec1954720","type":"BoxAnnotation"},{"id":"7c140505-ca3b-407f-bae9-e8a22ecb9308","type":"Legend"},{"id":"e91136c2-465e-4dd0-95a0-cae4067281f2","type":"GlyphRenderer"}],"title":{"id":"c7e4035e-ef7d-4ee4-a52a-2679f813240e","type":"Title"},"tool_events":{"id":"bf883908-4089-4d82-8a16-25e7e8688eb3","type":"ToolEvents"},"toolbar":{"id":"636f6919-404f-4fcf-ae98-7e1e353c7889","type":"Toolbar"},"x_range":{"id":"d47e77ec-de90-4291-9f33-3eec52e14ba1","type":"DataRange1d"},"y_range":{"id":"ff22babc-152c-4421-88b3-d31fdbc840b3","type":"DataRange1d"}},"id":"b811f9d4-d879-41d9-bf19-fff982829d88","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"bf883908-4089-4d82-8a16-25e7e8688eb3","type":"ToolEvents"},{"attributes":{"callback":null,"column_names":["x2","y1","x1","color","y2","label"],"data":{"color":["blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","red","blue","red","blue","blue","blue","red","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","red","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","red","blue","blue","blue","blue","blue","red","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue"],"label":["Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI"],"x1":[47,0,39,0,0,0,144,228,0,0,4,0,23,25,0,140,13,0,0,156,199,29,58,0,0,0,240,10,0,0,115,66,64,0,305,0,10,188,0,106,0,0,42,0,1,0,0,242,0,0,10,0,0,0,52,0,0,0,180,32,4,16,35,0,40,0,44,35,10,28,25,0,41,140,0,251,53,0,528,123,67,0,10,0,0,0,8,25,52,92,54,58,0,38,0,0,0,0,12,11,0,20,0,0,0,7,61,0,0,0,204,0,42,35,0,0,94,74,24,13,39,28,88,0,0,37,0,0,10,12,0,0,17,0,22,0,0,186,0,0,0,0,0,0],"x2":{"__ndarray__":"H/an2JyVkD8AAAAAAAAAAN3kOUC7o7E/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQSukv3QolD/fTq65hDedPwAAAAAAAAAAAAAAAAAAAADiUny6l2OFPwAAAAAAAAAAxkVmks9PjT9bv1Kg1q+EPwAAAAAAAAAAQnFFhCBKsz9LE/hQo+qBPwAAAAAAAAAAAAAAAAAAAADWE2Ub7aumP5cbPNXim7M/uHzLt3zLtz98Ezx5IGSfPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHcYFHVyecE/CIZki2jOij8AAAAAAAAAAAAAAAAAAAAAVcKdVMKdxD9d7+TqwtmVP00W2iZxDJ4/AAAAAAAAAADoPnYdklu+PwAAAAAAAAAAF1100UUXrT/Mr27K1NHLPwAAAAAAAAAAf0jg7YcEvj8AAAAAAAAAAAAAAAAAAAAAGYiBGIiBmD8AAAAAAAAAABIYgREYgVE/AAAAAAAAAAAAAAAAAAAAAI/3w/+o6rI/AAAAAAAAAAAAAAAAAAAAADyfHjdjf6g/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHthHU0R/rj8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcj0Ou//ymP5+YjUZgW58/TeQV++aXfD8QBEEQBEGgP+OYIiosD4s/AAAAAAAAAAAIH3zwwQefPwAAAAAAAAAAnxjJYzoskz8NNaXQauyoPwAAAAAAALQ/55xzzjnnrD805ow5Y864PwAAAAAAAAAAiaa1xeY5gj8uwmMTFXuGPwAAAAAAAAAAdWQV6rbynj9OfQkcatyWPwAAAAAAAAAA3ODIQOmesj/0LVFF63mdP2+K13TUT5g/AAAAAAAAAAAWOoMVOoOFPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM58NamRh3U/FcMct1fdkT+E6PFdOIieP3rNkKWXTJw//XmVxRntrj+CSAdPMziZPwAAAAAAAAAAX3XCbeobqD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJeWlpaWlrY/f9y6vAOOdD8AAAAAAAAAAMIU+awbTJE/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoOhoSMHtfz/H2o07UDqpPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIxrLufNQL8/AAAAAAAAAABLODFC5sKnP4IS3mjq/Jo/AAAAAAAAAAAAAAAAAAAAAGZb+mpG4p0/pTiIbxgCdD/Wh8b60Fh/P+py+4MMla0/+IN0NYBJsD+cbiWaO/6BP750njFD2Jg/AAAAAAAAAAAAAAAAAAAAAI9TYESLoIw/AAAAAAAAAAAAAAAAAAAAAGQhC1nIQpY/0LrBFPmsuz8AAAAAAAAAAAAAAAAAAAAALPSAkoDxmT8AAAAAAAAAAClcj8L1KKw/AAAAAAAAAAAAAAAAAAAAAGRE6LnPpJ8/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","dtype":"float64","shape":[144]},"y1":[65,0,0,0,0,0,386,108,0,0,0,1,8,2,0,15,1,0,0,71,25,7,12,0,0,0,11,0,4,0,4,609,20,0,14,0,3,11,0,3,0,0,37,0,8,0,0,6,0,0,27,0,0,0,6,0,0,0,61,21,7,0,38,0,1,0,15,5,17,5,19,0,171,387,0,194,15,0,411,16,14,0,0,0,0,0,0,2,0,194,1,26,0,1,0,0,0,0,0,2,0,15,0,0,0,0,48,1,0,0,49,0,4,48,0,0,83,65,6,14,18,23,30,0,0,13,0,0,11,0,0,0,0,0,7,0,0,24,0,0,0,0,0,0],"y2":{"__ndarray__":"Rl+sjZfvlj8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApCQTz3EEqz8yWDkO3K2LPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE4g+qOzU18/PMEl1QpkdD/Qb1VSrHpKPwAAAAAAAAAApoU7KK6IgD+YoR3GFw1GPwAAAAAAAAAAAAAAAAAAAADnG4CfD6OUP1lvaZMctYM/l2/5lm/5lj+twPx1lvp5PwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGqsUEUOoXk/AAAAAAAAAAAUFBQUFBSkPwAAAAAAAAAAF2DyFmDydj+43+0u5TPJP/BNSLjGx4I/AAAAAAAAAACIubo5pUt2PwAAAAAAAAAAdNFFF110kT+kN8QJPwuKPwAAAAAAAAAANPmyQZMvaz8AAAAAAAAAAAAAAAAAAAAAa1lBwK6WlT8AAAAAAAAAABIYgREYgYE/AAAAAAAAAAAAAAAAAAAAAIFe9Zc4BF4/AAAAAAAAAAAAAAAAAAAAAHyrNMUvicA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHKAuObUmfD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbNFBYcSmPPyjsTC73k5Q/wyezG+oEiT8AAAAAAAAAAJc/Hh/uYI0/AAAAAAAAAADTGDCNAdNIPwAAAAAAAAAANa3jzQklej80YeHJ53t8PwAAAAAAAME/pZRSSimlhD+3pC1pS9qyPwAAAAAAAAAA3YznRw4Boz9p4emOWBKfPwAAAAAAAAAAiBTGRojrlz++Oxn5X+F5PwAAAAAAAAAA4qPbxDb9rD9AIWXoqaxuP+YEd9ABUnQ/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYkFi6uDdVj8AAAAAAAAAAEG3sflR1q0/sneRfp1TUj8BQa5PUZyGPwAAAAAAAAAAQ4sPGWdNVD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiob449blTT8AAAAAAAAAACOfdYMp8ok/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjwceX89mjP5Z7GmG5p5E/AAAAAAAAAAAAAAAAAAAAALTGWRoMB54/AAAAAAAAAACnW9wNlxpyP7/2kMuKgaI/AAAAAAAAAAAAAAAAAAAAAL+ym7UHY5o/kew1TSOTcT/Wh8b60FhfP4bKDlOX268/Z0JNO4oRnj9JWvTqYY99P1M4pueK8IA/AAAAAAAAAAAAAAAAAAAAAP14q6XJHXQ/AAAAAAAAAAAAAAAAAAAAAIhxvy6pfJg/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOxRuB6F65E/AAAAAAAAAAAAAAAAAAAAADTA818QVXA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","dtype":"float64","shape":[144]}}},"id":"1cd2015a-e697-41cd-9008-22323403ed6b","type":"ColumnDataSource"},{"attributes":{"plot":{"id":"b811f9d4-d879-41d9-bf19-fff982829d88","subtype":"Figure","type":"Plot"}},"id":"b455056b-d9c2-408a-ac78-81e5757aa6fb","type":"PanTool"},{"attributes":{"plot":{"id":"b811f9d4-d879-41d9-bf19-fff982829d88","subtype":"Figure","type":"Plot"}},"id":"e392b639-8d28-4548-a059-72dbc7d94a20","type":"HelpTool"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"size":{"units":"screen","value":10},"x":{"field":"x2"},"y":{"field":"y2"}},"id":"0624e459-eb4c-455f-b384-8a0ce9f351be","type":"Circle"},{"attributes":{"data_source":{"id":"1cd2015a-e697-41cd-9008-22323403ed6b","type":"ColumnDataSource"},"glyph":{"id":"678d72d7-fef4-4b83-aea0-f15be0d3be85","type":"Circle"},"hover_glyph":null,"nonselection_glyph":{"id":"105d46b4-b555-482e-b13a-27d91c53457e","type":"Circle"},"selection_glyph":null},"id":"93a963df-66fb-4cbd-b66e-ac8e1ce69473","type":"GlyphRenderer"},{"attributes":{"active_drag":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"6d0baec6-f077-4ec2-9fa9-0ff69bff0eaa","type":"PanTool"},{"id":"27f6cf80-11e6-4aa5-817a-88040b6be40e","type":"WheelZoomTool"},{"id":"5daeb808-4d06-40c9-82e9-356856cc6787","type":"BoxZoomTool"},{"id":"60e218d2-2d9a-4afc-ab3d-1b4f14e5c1fe","type":"SaveTool"},{"id":"495db36c-a265-41aa-b9bb-6f1125694bc6","type":"ResetTool"},{"id":"b46770b2-34ea-4498-a9d1-e06ca8d00f73","type":"HelpTool"}]},"id":"a3df2c2d-69ae-4e32-a34e-62e08afca749","type":"Toolbar"},{"attributes":{},"id":"8dbd3ca7-900c-4fa1-b0b0-c814052f8584","type":"BasicTicker"},{"attributes":{},"id":"6a0ea0a5-931c-4e0c-9fa9-be56288e1b5d","type":"BasicTickFormatter"},{"attributes":{},"id":"29220bd5-da92-470e-8109-3d1c375ff0a5","type":"ToolEvents"},{"attributes":{},"id":"966414e4-9fe3-4cab-acab-b4eefa20b2ae","type":"BasicTicker"},{"attributes":{"axis_label":"no. of emails from POI to this person","formatter":{"id":"262631e1-7e80-4368-8368-30da37fdaea5","type":"BasicTickFormatter"},"plot":{"id":"ff267e86-3e7d-4eb2-8914-b8eb520afa87","subtype":"Figure","type":"Plot"},"ticker":{"id":"966414e4-9fe3-4cab-acab-b4eefa20b2ae","type":"BasicTicker"}},"id":"d5f6ef5c-7e72-49fa-b100-8c19f02c71b1","type":"LinearAxis"},{"attributes":{"overlay":{"id":"e4a25ac6-2952-4bb2-a2a4-b92ea7faf173","type":"BoxAnnotation"},"plot":{"id":"ff267e86-3e7d-4eb2-8914-b8eb520afa87","subtype":"Figure","type":"Plot"}},"id":"5daeb808-4d06-40c9-82e9-356856cc6787","type":"BoxZoomTool"},{"attributes":{"plot":{"id":"b811f9d4-d879-41d9-bf19-fff982829d88","subtype":"Figure","type":"Plot"}},"id":"1d7dfc59-aaf7-4fb3-b531-e281d2629260","type":"SaveTool"}],"root_ids":["cfac4550-bf44-4c08-b23b-9dcc0bc472b2"]},"title":"Bokeh Application","version":"0.12.4"}};
-            var render_items = [{"docid":"160b0b77-0641-4606-a5b4-b64df3d6fb54","elementid":"be5748e3-d41a-4004-9dce-9529062df0cf","modelid":"cfac4550-bf44-4c08-b23b-9dcc0bc472b2"}];
+            var docs_json = {"79ac4fa5-ecac-44d8-9878-d104fe355241":{"roots":{"references":[{"attributes":{"fill_alpha":{"value":0.5},"fill_color":{"field":"color"},"line_alpha":{"value":0.5},"line_color":{"field":"color"},"size":{"units":"screen","value":10},"x":{"field":"x2"},"y":{"field":"y2"}},"id":"8e64c029-f908-421d-bbdd-af01c8db7891","type":"Circle"},{"attributes":{"items":[{"id":"3c85c5b6-78a0-48c5-b7f5-004146a92331","type":"LegendItem"}],"plot":{"id":"21082280-1008-4b1b-b57d-cb79280caca4","subtype":"Figure","type":"Plot"}},"id":"8ba6ae61-de7e-43d1-9daa-6fc3e7288bb2","type":"Legend"},{"attributes":{"label":{"field":"label"},"renderers":[{"id":"09b142ee-aa44-4472-9bde-5757d4067270","type":"GlyphRenderer"}]},"id":"3c85c5b6-78a0-48c5-b7f5-004146a92331","type":"LegendItem"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"size":{"units":"screen","value":10},"x":{"field":"x2"},"y":{"field":"y2"}},"id":"f291e75a-1e94-4a5a-a034-58903ed74af5","type":"Circle"},{"attributes":{},"id":"0dbeeb5f-d861-4eee-a843-99594ec69799","type":"BasicTickFormatter"},{"attributes":{"callback":null},"id":"7ebcccb0-0153-47a4-817b-4426c47a778f","type":"DataRange1d"},{"attributes":{"callback":null},"id":"7ba0243a-d185-4404-8098-e26554df28a9","type":"DataRange1d"},{"attributes":{"callback":null},"id":"17b614cb-37f5-4081-8c7b-1a82edf167c5","type":"DataRange1d"},{"attributes":{"callback":null,"column_names":["x2","y1","x1","color","y2","label"],"data":{"color":["blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","red","blue","red","blue","blue","blue","red","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","red","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","red","blue","blue","blue","blue","blue","red","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue"],"label":["Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","Non-POI","POI","Non-POI"],"x1":[47,0,39,0,0,0,144,228,0,0,4,0,23,25,0,140,13,0,0,156,199,29,58,0,0,0,240,10,0,0,115,66,64,0,305,0,10,188,0,106,0,0,42,0,1,0,0,242,0,0,10,0,0,0,52,0,0,0,180,32,4,16,35,0,40,0,44,35,10,28,25,0,41,140,0,251,53,0,528,123,67,0,10,0,0,0,8,25,52,92,54,58,0,38,0,0,0,0,12,11,0,20,0,0,0,7,61,0,0,0,204,0,42,35,0,0,94,74,24,13,39,28,88,0,0,37,0,0,10,12,0,0,17,0,22,0,0,186,0,0,0,0,0,0],"x2":{"__ndarray__":"H/an2JyVkD8AAAAAAAAAAN3kOUC7o7E/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQSukv3QolD/fTq65hDedPwAAAAAAAAAAAAAAAAAAAADiUny6l2OFPwAAAAAAAAAAxkVmks9PjT9bv1Kg1q+EPwAAAAAAAAAAQnFFhCBKsz9LE/hQo+qBPwAAAAAAAAAAAAAAAAAAAADWE2Ub7aumP5cbPNXim7M/uHzLt3zLtz98Ezx5IGSfPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHcYFHVyecE/CIZki2jOij8AAAAAAAAAAAAAAAAAAAAAVcKdVMKdxD9d7+TqwtmVP00W2iZxDJ4/AAAAAAAAAADoPnYdklu+PwAAAAAAAAAAF1100UUXrT/Mr27K1NHLPwAAAAAAAAAAf0jg7YcEvj8AAAAAAAAAAAAAAAAAAAAAGYiBGIiBmD8AAAAAAAAAABIYgREYgVE/AAAAAAAAAAAAAAAAAAAAAI/3w/+o6rI/AAAAAAAAAAAAAAAAAAAAADyfHjdjf6g/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHthHU0R/rj8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcj0Ou//ymP5+YjUZgW58/TeQV++aXfD8QBEEQBEGgP+OYIiosD4s/AAAAAAAAAAAIH3zwwQefPwAAAAAAAAAAnxjJYzoskz8NNaXQauyoPwAAAAAAALQ/55xzzjnnrD805ow5Y864PwAAAAAAAAAAiaa1xeY5gj8uwmMTFXuGPwAAAAAAAAAAdWQV6rbynj9OfQkcatyWPwAAAAAAAAAA3ODIQOmesj/0LVFF63mdP2+K13TUT5g/AAAAAAAAAAAWOoMVOoOFPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM58NamRh3U/FcMct1fdkT+E6PFdOIieP3rNkKWXTJw//XmVxRntrj+CSAdPMziZPwAAAAAAAAAAX3XCbeobqD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJeWlpaWlrY/f9y6vAOOdD8AAAAAAAAAAMIU+awbTJE/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoOhoSMHtfz/H2o07UDqpPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIxrLufNQL8/AAAAAAAAAABLODFC5sKnP4IS3mjq/Jo/AAAAAAAAAAAAAAAAAAAAAGZb+mpG4p0/pTiIbxgCdD/Wh8b60Fh/P+py+4MMla0/+IN0NYBJsD+cbiWaO/6BP750njFD2Jg/AAAAAAAAAAAAAAAAAAAAAI9TYESLoIw/AAAAAAAAAAAAAAAAAAAAAGQhC1nIQpY/0LrBFPmsuz8AAAAAAAAAAAAAAAAAAAAALPSAkoDxmT8AAAAAAAAAAClcj8L1KKw/AAAAAAAAAAAAAAAAAAAAAGRE6LnPpJ8/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","dtype":"float64","shape":[144]},"y1":[65,0,0,0,0,0,386,108,0,0,0,1,8,2,0,15,1,0,0,71,25,7,12,0,0,0,11,0,4,0,4,609,20,0,14,0,3,11,0,3,0,0,37,0,8,0,0,6,0,0,27,0,0,0,6,0,0,0,61,21,7,0,38,0,1,0,15,5,17,5,19,0,171,387,0,194,15,0,411,16,14,0,0,0,0,0,0,2,0,194,1,26,0,1,0,0,0,0,0,2,0,15,0,0,0,0,48,1,0,0,49,0,4,48,0,0,83,65,6,14,18,23,30,0,0,13,0,0,11,0,0,0,0,0,7,0,0,24,0,0,0,0,0,0],"y2":{"__ndarray__":"Rl+sjZfvlj8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApCQTz3EEqz8yWDkO3K2LPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE4g+qOzU18/PMEl1QpkdD/Qb1VSrHpKPwAAAAAAAAAApoU7KK6IgD+YoR3GFw1GPwAAAAAAAAAAAAAAAAAAAADnG4CfD6OUP1lvaZMctYM/l2/5lm/5lj+twPx1lvp5PwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGqsUEUOoXk/AAAAAAAAAAAUFBQUFBSkPwAAAAAAAAAAF2DyFmDydj+43+0u5TPJP/BNSLjGx4I/AAAAAAAAAACIubo5pUt2PwAAAAAAAAAAdNFFF110kT+kN8QJPwuKPwAAAAAAAAAANPmyQZMvaz8AAAAAAAAAAAAAAAAAAAAAa1lBwK6WlT8AAAAAAAAAABIYgREYgYE/AAAAAAAAAAAAAAAAAAAAAIFe9Zc4BF4/AAAAAAAAAAAAAAAAAAAAAHyrNMUvicA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHKAuObUmfD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbNFBYcSmPPyjsTC73k5Q/wyezG+oEiT8AAAAAAAAAAJc/Hh/uYI0/AAAAAAAAAADTGDCNAdNIPwAAAAAAAAAANa3jzQklej80YeHJ53t8PwAAAAAAAME/pZRSSimlhD+3pC1pS9qyPwAAAAAAAAAA3YznRw4Boz9p4emOWBKfPwAAAAAAAAAAiBTGRojrlz++Oxn5X+F5PwAAAAAAAAAA4qPbxDb9rD9AIWXoqaxuP+YEd9ABUnQ/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYkFi6uDdVj8AAAAAAAAAAEG3sflR1q0/sneRfp1TUj8BQa5PUZyGPwAAAAAAAAAAQ4sPGWdNVD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiob449blTT8AAAAAAAAAACOfdYMp8ok/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjwceX89mjP5Z7GmG5p5E/AAAAAAAAAAAAAAAAAAAAALTGWRoMB54/AAAAAAAAAACnW9wNlxpyP7/2kMuKgaI/AAAAAAAAAAAAAAAAAAAAAL+ym7UHY5o/kew1TSOTcT/Wh8b60FhfP4bKDlOX268/Z0JNO4oRnj9JWvTqYY99P1M4pueK8IA/AAAAAAAAAAAAAAAAAAAAAP14q6XJHXQ/AAAAAAAAAAAAAAAAAAAAAIhxvy6pfJg/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOxRuB6F65E/AAAAAAAAAAAAAAAAAAAAADTA818QVXA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","dtype":"float64","shape":[144]}}},"id":"70c93121-7855-40f6-91d7-93d161c66cd5","type":"ColumnDataSource"},{"attributes":{"children":[{"id":"87bc7c09-ed79-47e8-a02a-1fad42d3f816","subtype":"Figure","type":"Plot"},{"id":"21082280-1008-4b1b-b57d-cb79280caca4","subtype":"Figure","type":"Plot"}]},"id":"59cb3f07-d4bc-42a4-bd78-306353436d8f","type":"Row"},{"attributes":{"plot":{"id":"87bc7c09-ed79-47e8-a02a-1fad42d3f816","subtype":"Figure","type":"Plot"}},"id":"51303232-785b-4344-8bf2-7c2dd162c2e1","type":"SaveTool"},{"attributes":{},"id":"41f73dbe-65b3-4796-b030-d735a41b80f3","type":"ToolEvents"},{"attributes":{"below":[{"id":"eb33ea1e-ee2a-4353-b12c-cef63d31fe7b","type":"LinearAxis"}],"left":[{"id":"05b2a557-b9de-4ca9-a262-5e0367892cbb","type":"LinearAxis"}],"plot_height":400,"plot_width":450,"renderers":[{"id":"eb33ea1e-ee2a-4353-b12c-cef63d31fe7b","type":"LinearAxis"},{"id":"1553a96d-e60d-409b-83ce-87c2ad896020","type":"Grid"},{"id":"05b2a557-b9de-4ca9-a262-5e0367892cbb","type":"LinearAxis"},{"id":"124947e7-1a07-4d6a-80d2-d61fa7391aff","type":"Grid"},{"id":"4396a93a-11ec-4df5-a2be-5c7dae7b985c","type":"BoxAnnotation"},{"id":"8ba6ae61-de7e-43d1-9daa-6fc3e7288bb2","type":"Legend"},{"id":"09b142ee-aa44-4472-9bde-5757d4067270","type":"GlyphRenderer"}],"title":{"id":"37d6b8c8-6d6c-4fac-bc09-d31110cc04b4","type":"Title"},"tool_events":{"id":"5245b22c-ea4a-4126-8a6c-866d489ce2e5","type":"ToolEvents"},"toolbar":{"id":"a2c0965b-5a36-45a9-9779-b85f07ec1485","type":"Toolbar"},"x_range":{"id":"7ebcccb0-0153-47a4-817b-4426c47a778f","type":"DataRange1d"},"y_range":{"id":"2763bce7-0b24-4af9-ad76-2117f9149539","type":"DataRange1d"}},"id":"21082280-1008-4b1b-b57d-cb79280caca4","subtype":"Figure","type":"Plot"},{"attributes":{"plot":null,"text":""},"id":"5c9ad115-00d2-47b9-b4a2-c886f3badabe","type":"Title"},{"attributes":{},"id":"9450db1c-ea70-49be-8553-020a84ccf33d","type":"BasicTicker"},{"attributes":{"callback":null},"id":"2763bce7-0b24-4af9-ad76-2117f9149539","type":"DataRange1d"},{"attributes":{"data_source":{"id":"70c93121-7855-40f6-91d7-93d161c66cd5","type":"ColumnDataSource"},"glyph":{"id":"8e64c029-f908-421d-bbdd-af01c8db7891","type":"Circle"},"hover_glyph":null,"nonselection_glyph":{"id":"f291e75a-1e94-4a5a-a034-58903ed74af5","type":"Circle"},"selection_glyph":null},"id":"09b142ee-aa44-4472-9bde-5757d4067270","type":"GlyphRenderer"},{"attributes":{"axis_label":"no. of emails from POI to this person","formatter":{"id":"0dbeeb5f-d861-4eee-a843-99594ec69799","type":"BasicTickFormatter"},"plot":{"id":"87bc7c09-ed79-47e8-a02a-1fad42d3f816","subtype":"Figure","type":"Plot"},"ticker":{"id":"86bda56b-d53b-49a0-83c6-4ecfa83f4ff6","type":"BasicTicker"}},"id":"d4960d60-369d-4f7e-b195-5f894a86c080","type":"LinearAxis"},{"attributes":{"label":{"field":"label"},"renderers":[{"id":"074e0944-f0da-4676-8a16-8907300b8035","type":"GlyphRenderer"}]},"id":"573da0b3-f6d9-4f55-9580-5117896b6692","type":"LegendItem"},{"attributes":{"plot":{"id":"21082280-1008-4b1b-b57d-cb79280caca4","subtype":"Figure","type":"Plot"}},"id":"7668a4d4-d92e-4fc2-bca4-d22174862844","type":"HelpTool"},{"attributes":{},"id":"9bcb7e5f-e126-4307-ad70-0bce4a614b84","type":"BasicTickFormatter"},{"attributes":{"items":[{"id":"573da0b3-f6d9-4f55-9580-5117896b6692","type":"LegendItem"}],"plot":{"id":"87bc7c09-ed79-47e8-a02a-1fad42d3f816","subtype":"Figure","type":"Plot"}},"id":"002ba308-1d98-489b-9033-9ef8e9b01949","type":"Legend"},{"attributes":{"overlay":{"id":"4396a93a-11ec-4df5-a2be-5c7dae7b985c","type":"BoxAnnotation"},"plot":{"id":"21082280-1008-4b1b-b57d-cb79280caca4","subtype":"Figure","type":"Plot"}},"id":"ccc0ccee-62bf-45a7-869c-5ef463a4b599","type":"BoxZoomTool"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"4396a93a-11ec-4df5-a2be-5c7dae7b985c","type":"BoxAnnotation"},{"attributes":{},"id":"5245b22c-ea4a-4126-8a6c-866d489ce2e5","type":"ToolEvents"},{"attributes":{"axis_label":"fraction of emails this person sends to POI","formatter":{"id":"0aef687c-2906-472d-8f6b-786e15c5cf3f","type":"BasicTickFormatter"},"plot":{"id":"21082280-1008-4b1b-b57d-cb79280caca4","subtype":"Figure","type":"Plot"},"ticker":{"id":"9450db1c-ea70-49be-8553-020a84ccf33d","type":"BasicTicker"}},"id":"05b2a557-b9de-4ca9-a262-5e0367892cbb","type":"LinearAxis"},{"attributes":{"data_source":{"id":"70c93121-7855-40f6-91d7-93d161c66cd5","type":"ColumnDataSource"},"glyph":{"id":"a8648c51-a8d9-4f33-be56-510ef8406f51","type":"Circle"},"hover_glyph":null,"nonselection_glyph":{"id":"9ea4ed61-affc-4c9c-a95e-d98b74a460c7","type":"Circle"},"selection_glyph":null},"id":"074e0944-f0da-4676-8a16-8907300b8035","type":"GlyphRenderer"},{"attributes":{},"id":"86bda56b-d53b-49a0-83c6-4ecfa83f4ff6","type":"BasicTicker"},{"attributes":{"plot":{"id":"21082280-1008-4b1b-b57d-cb79280caca4","subtype":"Figure","type":"Plot"},"ticker":{"id":"e90c5065-0877-4b4e-97de-afd3a87a5631","type":"BasicTicker"}},"id":"1553a96d-e60d-409b-83ce-87c2ad896020","type":"Grid"},{"attributes":{"plot":{"id":"87bc7c09-ed79-47e8-a02a-1fad42d3f816","subtype":"Figure","type":"Plot"}},"id":"939cd85a-b8f7-45a5-95c3-45d6461193a0","type":"WheelZoomTool"},{"attributes":{"overlay":{"id":"54a122ff-1d86-4bee-b870-66b644217789","type":"BoxAnnotation"},"plot":{"id":"87bc7c09-ed79-47e8-a02a-1fad42d3f816","subtype":"Figure","type":"Plot"}},"id":"5b6d21ed-4edd-4ba8-971a-114af514f023","type":"BoxZoomTool"},{"attributes":{"below":[{"id":"d4960d60-369d-4f7e-b195-5f894a86c080","type":"LinearAxis"}],"left":[{"id":"c710c18c-f64d-477b-8745-2152c9d040b8","type":"LinearAxis"}],"plot_height":400,"plot_width":450,"renderers":[{"id":"d4960d60-369d-4f7e-b195-5f894a86c080","type":"LinearAxis"},{"id":"1d87b5e7-1e1c-4e94-b41e-e45ec0c6c61f","type":"Grid"},{"id":"c710c18c-f64d-477b-8745-2152c9d040b8","type":"LinearAxis"},{"id":"c358ffa4-6bdf-4d35-84d3-e972dba9e3ed","type":"Grid"},{"id":"54a122ff-1d86-4bee-b870-66b644217789","type":"BoxAnnotation"},{"id":"002ba308-1d98-489b-9033-9ef8e9b01949","type":"Legend"},{"id":"074e0944-f0da-4676-8a16-8907300b8035","type":"GlyphRenderer"}],"title":{"id":"5c9ad115-00d2-47b9-b4a2-c886f3badabe","type":"Title"},"tool_events":{"id":"41f73dbe-65b3-4796-b030-d735a41b80f3","type":"ToolEvents"},"toolbar":{"id":"1d227d2f-1246-4b1e-b7a4-1309a9988e01","type":"Toolbar"},"x_range":{"id":"17b614cb-37f5-4081-8c7b-1a82edf167c5","type":"DataRange1d"},"y_range":{"id":"7ba0243a-d185-4404-8098-e26554df28a9","type":"DataRange1d"}},"id":"87bc7c09-ed79-47e8-a02a-1fad42d3f816","subtype":"Figure","type":"Plot"},{"attributes":{"plot":{"id":"87bc7c09-ed79-47e8-a02a-1fad42d3f816","subtype":"Figure","type":"Plot"}},"id":"7f26e7f3-a153-4929-b216-7df3e55a3f81","type":"ResetTool"},{"attributes":{"plot":{"id":"21082280-1008-4b1b-b57d-cb79280caca4","subtype":"Figure","type":"Plot"}},"id":"c64a2b0f-19d0-4f9d-862a-ae2b937f668a","type":"WheelZoomTool"},{"attributes":{"plot":null,"text":""},"id":"37d6b8c8-6d6c-4fac-bc09-d31110cc04b4","type":"Title"},{"attributes":{"plot":{"id":"21082280-1008-4b1b-b57d-cb79280caca4","subtype":"Figure","type":"Plot"}},"id":"60a047fd-03cd-45ec-8d0d-e7ed507535a5","type":"ResetTool"},{"attributes":{"active_drag":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"4a12b210-961a-4b52-975b-fe860595ea56","type":"PanTool"},{"id":"c64a2b0f-19d0-4f9d-862a-ae2b937f668a","type":"WheelZoomTool"},{"id":"ccc0ccee-62bf-45a7-869c-5ef463a4b599","type":"BoxZoomTool"},{"id":"5fd88471-34f9-4914-a863-71728dc466d1","type":"SaveTool"},{"id":"60a047fd-03cd-45ec-8d0d-e7ed507535a5","type":"ResetTool"},{"id":"7668a4d4-d92e-4fc2-bca4-d22174862844","type":"HelpTool"}]},"id":"a2c0965b-5a36-45a9-9779-b85f07ec1485","type":"Toolbar"},{"attributes":{"fill_alpha":{"value":0.5},"fill_color":{"field":"color"},"line_alpha":{"value":0.5},"line_color":{"field":"color"},"size":{"units":"screen","value":10},"x":{"field":"x1"},"y":{"field":"y1"}},"id":"a8648c51-a8d9-4f33-be56-510ef8406f51","type":"Circle"},{"attributes":{"axis_label":"no. of emails from this person to POI","formatter":{"id":"9bcb7e5f-e126-4307-ad70-0bce4a614b84","type":"BasicTickFormatter"},"plot":{"id":"87bc7c09-ed79-47e8-a02a-1fad42d3f816","subtype":"Figure","type":"Plot"},"ticker":{"id":"5078fe83-7832-4eb1-b02c-184f338f8b1a","type":"BasicTicker"}},"id":"c710c18c-f64d-477b-8745-2152c9d040b8","type":"LinearAxis"},{"attributes":{"dimension":1,"plot":{"id":"21082280-1008-4b1b-b57d-cb79280caca4","subtype":"Figure","type":"Plot"},"ticker":{"id":"9450db1c-ea70-49be-8553-020a84ccf33d","type":"BasicTicker"}},"id":"124947e7-1a07-4d6a-80d2-d61fa7391aff","type":"Grid"},{"attributes":{},"id":"5078fe83-7832-4eb1-b02c-184f338f8b1a","type":"BasicTicker"},{"attributes":{},"id":"0aef687c-2906-472d-8f6b-786e15c5cf3f","type":"BasicTickFormatter"},{"attributes":{"plot":{"id":"87bc7c09-ed79-47e8-a02a-1fad42d3f816","subtype":"Figure","type":"Plot"}},"id":"169e0bf8-4a2b-44f9-b2c2-6861dea05ae1","type":"HelpTool"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"size":{"units":"screen","value":10},"x":{"field":"x1"},"y":{"field":"y1"}},"id":"9ea4ed61-affc-4c9c-a95e-d98b74a460c7","type":"Circle"},{"attributes":{"dimension":1,"plot":{"id":"87bc7c09-ed79-47e8-a02a-1fad42d3f816","subtype":"Figure","type":"Plot"},"ticker":{"id":"5078fe83-7832-4eb1-b02c-184f338f8b1a","type":"BasicTicker"}},"id":"c358ffa4-6bdf-4d35-84d3-e972dba9e3ed","type":"Grid"},{"attributes":{"plot":{"id":"87bc7c09-ed79-47e8-a02a-1fad42d3f816","subtype":"Figure","type":"Plot"}},"id":"d2ddc125-70d2-4c25-8ffc-6f149fd9780c","type":"PanTool"},{"attributes":{"plot":{"id":"21082280-1008-4b1b-b57d-cb79280caca4","subtype":"Figure","type":"Plot"}},"id":"4a12b210-961a-4b52-975b-fe860595ea56","type":"PanTool"},{"attributes":{"plot":{"id":"87bc7c09-ed79-47e8-a02a-1fad42d3f816","subtype":"Figure","type":"Plot"},"ticker":{"id":"86bda56b-d53b-49a0-83c6-4ecfa83f4ff6","type":"BasicTicker"}},"id":"1d87b5e7-1e1c-4e94-b41e-e45ec0c6c61f","type":"Grid"},{"attributes":{},"id":"e90c5065-0877-4b4e-97de-afd3a87a5631","type":"BasicTicker"},{"attributes":{"plot":{"id":"21082280-1008-4b1b-b57d-cb79280caca4","subtype":"Figure","type":"Plot"}},"id":"5fd88471-34f9-4914-a863-71728dc466d1","type":"SaveTool"},{"attributes":{"active_drag":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"d2ddc125-70d2-4c25-8ffc-6f149fd9780c","type":"PanTool"},{"id":"939cd85a-b8f7-45a5-95c3-45d6461193a0","type":"WheelZoomTool"},{"id":"5b6d21ed-4edd-4ba8-971a-114af514f023","type":"BoxZoomTool"},{"id":"51303232-785b-4344-8bf2-7c2dd162c2e1","type":"SaveTool"},{"id":"7f26e7f3-a153-4929-b216-7df3e55a3f81","type":"ResetTool"},{"id":"169e0bf8-4a2b-44f9-b2c2-6861dea05ae1","type":"HelpTool"}]},"id":"1d227d2f-1246-4b1e-b7a4-1309a9988e01","type":"Toolbar"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"54a122ff-1d86-4bee-b870-66b644217789","type":"BoxAnnotation"},{"attributes":{"axis_label":"fraction of emails this person gets from POI","formatter":{"id":"551bf215-d99f-4915-b716-7b7ded03bc3b","type":"BasicTickFormatter"},"plot":{"id":"21082280-1008-4b1b-b57d-cb79280caca4","subtype":"Figure","type":"Plot"},"ticker":{"id":"e90c5065-0877-4b4e-97de-afd3a87a5631","type":"BasicTicker"}},"id":"eb33ea1e-ee2a-4353-b12c-cef63d31fe7b","type":"LinearAxis"},{"attributes":{},"id":"551bf215-d99f-4915-b716-7b7ded03bc3b","type":"BasicTickFormatter"}],"root_ids":["59cb3f07-d4bc-42a4-bd78-306353436d8f"]},"title":"Bokeh Application","version":"0.12.4"}};
+            var render_items = [{"docid":"79ac4fa5-ecac-44d8-9878-d104fe355241","elementid":"f5005dce-f1dd-469c-b74f-a276d04d3302","modelid":"59cb3f07-d4bc-42a4-bd78-306353436d8f"}];
             
             Bokeh.embed.embed_items(docs_json, render_items);
           };
@@ -13049,7 +13151,7 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
         console.log("Bokeh: BokehJS failed to load within specified timeout.");
         window._bokeh_failed_load = true;
       } else if (force !== true) {
-        var cell = $(document.getElementById("be5748e3-d41a-4004-9dce-9529062df0cf")).parents('.cell').data().cell;
+        var cell = $(document.getElementById("f5005dce-f1dd-469c-b74f-a276d04d3302")).parents('.cell').data().cell;
         cell.output_area.append_execute_result(NB_LOAD_WARNING)
       }
   
@@ -13080,14 +13182,14 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Feature-Selection">Feature Selection<a class="anchor-link" href="#Feature-Selection">&#182;</a></h4><p>To have minimum number if features that can capture trends and patters in the data. I have not used features that do not give any information. Machine Learning algorithm is just going to be as good as the features we put into it. It is critical that the methodology deployed for feature selection must be scientific and exhaustive without room for intuition.</p>
-<p>First I manually removed features which has more than 50% of the NaN values, then I performed SelectKBest on remaining features and selected eight features with scores greater than 2.</p>
+<p>First I manually removed features which has more than 50% of the NaN values, then I performed SelectKBest on remaining features.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">### Store to my_dataset for easy export below.</span>
@@ -13095,8 +13197,9 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
 
 <span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">SelectKBest</span><span class="p">,</span> <span class="n">f_classif</span>
 
-<span class="n">features_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;poi&#39;</span><span class="p">,</span> <span class="s1">&#39;bonus&#39;</span><span class="p">,</span> <span class="s1">&#39;exercised_stock_options&#39;</span><span class="p">,</span> <span class="s1">&#39;expenses&#39;</span><span class="p">,</span> <span class="s1">&#39;other&#39;</span><span class="p">,</span> <span class="s1">&#39;restricted_stock&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;shared_receipt_with_poi&#39;</span><span class="p">,</span> <span class="s1">&#39;total_payments&#39;</span><span class="p">,</span> <span class="s1">&#39;total_stock_value&#39;</span><span class="p">,</span> <span class="s1">&#39;fraction_to_poi&#39;</span><span class="p">,</span> <span class="s1">&#39;fraction_from_poi&#39;</span><span class="p">]</span>
+<span class="n">features_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;poi&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">,</span> <span class="s1">&#39;total_payments&#39;</span><span class="p">,</span> <span class="s1">&#39;exercised_stock_options&#39;</span><span class="p">,</span> <span class="s1">&#39;bonus&#39;</span><span class="p">,</span> <span class="s1">&#39;restricted_stock&#39;</span><span class="p">,</span> <span class="s1">&#39;other&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;shared_receipt_with_poi&#39;</span><span class="p">,</span> <span class="s1">&#39;total_stock_value&#39;</span><span class="p">,</span> <span class="s1">&#39;expenses&#39;</span><span class="p">,</span> <span class="s1">&#39;loan_advances&#39;</span><span class="p">,</span> <span class="s1">&#39;from_messages&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;from_this_person_to_poi&#39;</span><span class="p">,</span> <span class="s1">&#39;long_term_incentive&#39;</span><span class="p">,</span> <span class="s1">&#39;from_poi_to_this_person&#39;</span><span class="p">]</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">featureFormat</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">,</span> <span class="n">features_list</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">labels</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="n">targetFeatureSplit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -13106,7 +13209,7 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
 <span class="n">selector</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
 
 <span class="c1">#Get the raw p-values for each feature, and transform from p-values into scores</span>
-<span class="n">scores</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">selector</span><span class="o">.</span><span class="n">pvalues_</span><span class="p">)</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">scores_</span>
 
 <span class="c1">#Bokeh Barplots</span>
 <span class="kn">from</span> <span class="nn">bokeh.charts</span> <span class="kn">import</span> <span class="n">Bar</span><span class="p">,</span> <span class="n">show</span>
@@ -13114,7 +13217,7 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;scores&#39;</span><span class="p">:</span> <span class="n">scores</span><span class="p">,</span> <span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="n">features_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:]}</span>
 
 <span class="n">bar</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;features&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;scores&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Select K Best&#39;</span><span class="p">,</span>
-         <span class="n">legend</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">plot_width</span><span class="o">=</span><span class="mi">450</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">450</span><span class="p">)</span>
+         <span class="n">legend</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">plot_width</span><span class="o">=</span><span class="mi">850</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">450</span><span class="p">)</span>
 
 <span class="n">show</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
 </pre></div>
@@ -13133,7 +13236,7 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
 
 
     <div class="bk-root">
-        <div class="bk-plotdiv" id="d9e3834c-2a45-41f2-b0c2-e9ee655a60d5"></div>
+        <div class="bk-plotdiv" id="7bd9d2d1-36a0-4f9e-8c1e-6e70052835d0"></div>
     </div>
 <script type="text/javascript">
   
@@ -13174,7 +13277,7 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
   
     function display_loaded() {
       if (window.Bokeh !== undefined) {
-        document.getElementById("d9e3834c-2a45-41f2-b0c2-e9ee655a60d5").textContent = "BokehJS successfully loaded.";
+        document.getElementById("7bd9d2d1-36a0-4f9e-8c1e-6e70052835d0").textContent = "BokehJS successfully loaded.";
       } else if (Date.now() < window._bokeh_timeout) {
         setTimeout(display_loaded, 100)
       }
@@ -13216,9 +13319,9 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
         console.log("Bokeh: injecting script tag for BokehJS library: ", url);
         document.getElementsByTagName("head")[0].appendChild(s);
       }
-    };var element = document.getElementById("d9e3834c-2a45-41f2-b0c2-e9ee655a60d5");
+    };var element = document.getElementById("7bd9d2d1-36a0-4f9e-8c1e-6e70052835d0");
     if (element == null) {
-      console.log("Bokeh: ERROR: autoload.js configured with elementid 'd9e3834c-2a45-41f2-b0c2-e9ee655a60d5' but no matching script tag was found. ")
+      console.log("Bokeh: ERROR: autoload.js configured with elementid '7bd9d2d1-36a0-4f9e-8c1e-6e70052835d0' but no matching script tag was found. ")
       return false;
     }
   
@@ -13228,8 +13331,8 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
       function(Bokeh) {
         (function() {
           var fn = function() {
-            var docs_json = {"38c45181-bfeb-4421-b620-605aa15aba63":{"roots":{"references":[{"attributes":{"callback":null,"end":6.0273750405400115},"id":"3298f731-2799-4227-97e7-6afedb452267","type":"Range1d"},{"attributes":{"data_source":{"id":"daf063c7-ff98-48b0-8e94-fa22579fead5","type":"ColumnDataSource"},"glyph":{"id":"46e55b8c-5ad3-4771-a9f8-34b5e0f6d493","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"544cf2f2-69ab-444f-8980-4fdc11df2998","type":"GlyphRenderer"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"expenses"}],"color":["#f22c40"],"features":["expenses"],"fill_alpha":[0.8],"height":[1.8309666095033812],"label":[{"features":"expenses"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["expenses"],"y":[0.9154833047516906]}},"id":"daf063c7-ff98-48b0-8e94-fa22579fead5","type":"ColumnDataSource"},{"attributes":{"plot":null,"text":"Select K Best"},"id":"3fa81cbe-292c-47b6-b72e-53640521b0a8","type":"Title"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"restricted_stock"}],"color":["#f22c40"],"features":["restricted_stock"],"fill_alpha":[0.8],"height":[2.543208542735528],"label":[{"features":"restricted_stock"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["restricted_stock"],"y":[1.271604271367764]}},"id":"389aea0a-7f69-484d-beab-ddc0ab45305a","type":"ColumnDataSource"},{"attributes":{"data_source":{"id":"389aea0a-7f69-484d-beab-ddc0ab45305a","type":"ColumnDataSource"},"glyph":{"id":"cb756d18-1457-48fb-b817-f5860101ec31","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"4daa001a-0d30-4832-8e06-f7f171b7a1b1","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"cb756d18-1457-48fb-b817-f5860101ec31","type":"Rect"},{"attributes":{},"id":"83f8923e-86a3-4c2e-8ae2-055d888198ed","type":"CategoricalTickFormatter"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"total_payments"}],"color":["#f22c40"],"features":["total_payments"],"fill_alpha":[0.8],"height":[2.4449870742699775],"label":[{"features":"total_payments"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["total_payments"],"y":[1.2224935371349888]}},"id":"93a83248-d4fb-461d-a9b3-feb317b29ba9","type":"ColumnDataSource"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"0ffd117e-b3e3-4241-a219-5ec15a714d4f","type":"Rect"},{"attributes":{},"id":"bf2555c3-f5fb-45ed-be26-bd11b79cb632","type":"BasicTickFormatter"},{"attributes":{"data_source":{"id":"59871651-5ded-4053-a5c3-e45d12bd1b99","type":"ColumnDataSource"},"glyph":{"id":"5e4fccf3-7b63-49ea-a535-6f923588bc34","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"59b8e02d-886d-460f-b9a5-8448de527f19","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"46f92334-56cd-43dc-9c98-804c72b7030b","type":"Rect"},{"attributes":{"callback":null,"factors":["bonus","exercised_stock_options","expenses","fraction_from_poi","fraction_to_poi","other","restricted_stock","salary","shared_receipt_with_poi","total_payments","total_stock_value"]},"id":"80b93c63-cad1-45d9-88f0-efa51bf9a2f5","type":"FactorRange"},{"attributes":{"data_source":{"id":"5130a215-c202-405d-ab32-8a45c5db7e38","type":"ColumnDataSource"},"glyph":{"id":"0ffd117e-b3e3-4241-a219-5ec15a714d4f","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"48523c06-4182-459a-80aa-e78e01f357ac","type":"GlyphRenderer"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"other"}],"color":["#f22c40"],"features":["other"],"fill_alpha":[0.8],"height":[1.3707765246201635],"label":[{"features":"other"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["other"],"y":[0.6853882623100818]}},"id":"9c387ce1-c82b-49e4-b545-b682481d65d9","type":"ColumnDataSource"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"b531b425-0e35-4ab8-b416-1d90fad0c031","type":"Rect"},{"attributes":{"plot":{"id":"06af22d2-b756-4153-8052-6c9374a70583","subtype":"Chart","type":"Plot"}},"id":"4678a239-e0f3-4b68-b322-69e0d648a4df","type":"ResetTool"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"62b4a71e-cffd-4e82-9ed8-8f5f4fd8b784","type":"Rect"},{"attributes":{"active_drag":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"7d3660af-5d58-4398-aaf3-30400cc8c2cc","type":"PanTool"},{"id":"ad9186c3-3079-4808-812e-578491d4b10b","type":"WheelZoomTool"},{"id":"221a25fd-43f9-499b-90c3-be5c3d1b6af9","type":"BoxZoomTool"},{"id":"5cfd04ee-a4b9-4842-9ce6-4b10e58e4cdc","type":"SaveTool"},{"id":"4678a239-e0f3-4b68-b322-69e0d648a4df","type":"ResetTool"},{"id":"902b46ab-ca10-4195-8b49-b52c9ec006d2","type":"HelpTool"}]},"id":"96e8558a-5bb6-45e2-a39e-d1e7a1c3cf68","type":"Toolbar"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"5e4fccf3-7b63-49ea-a535-6f923588bc34","type":"Rect"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"salary"}],"color":["#f22c40"],"features":["salary"],"fill_alpha":[0.8],"height":[4.458636238488813],"label":[{"features":"salary"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["salary"],"y":[2.2293181192444065]}},"id":"08d9883e-bce1-4ded-afae-7406d7b42c63","type":"ColumnDataSource"},{"attributes":{"data_source":{"id":"08d9883e-bce1-4ded-afae-7406d7b42c63","type":"ColumnDataSource"},"glyph":{"id":"46f92334-56cd-43dc-9c98-804c72b7030b","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"c76bf6dc-8029-491f-b4f5-81c98d8cd031","type":"GlyphRenderer"},{"attributes":{"axis_label":"Features","formatter":{"id":"83f8923e-86a3-4c2e-8ae2-055d888198ed","type":"CategoricalTickFormatter"},"major_label_orientation":0.7853981633974483,"plot":{"id":"06af22d2-b756-4153-8052-6c9374a70583","subtype":"Chart","type":"Plot"},"ticker":{"id":"fe2134ff-488a-47ea-b775-f331f29134fc","type":"CategoricalTicker"}},"id":"a19a8cdb-3d67-4df8-b685-298f1652c464","type":"CategoricalAxis"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"b54142e0-dea2-4c46-b471-a917e882f0c7","type":"BoxAnnotation"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"fraction_from_poi"}],"color":["#f22c40"],"features":["fraction_from_poi"],"fill_alpha":[0.8],"height":[1.10173509818475],"label":[{"features":"fraction_from_poi"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["fraction_from_poi"],"y":[0.550867549092375]}},"id":"5130a215-c202-405d-ab32-8a45c5db7e38","type":"ColumnDataSource"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"total_stock_value"}],"color":["#f22c40"],"features":["total_stock_value"],"fill_alpha":[0.8],"height":[5.61900858422821],"label":[{"features":"total_stock_value"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["total_stock_value"],"y":[2.809504292114105]}},"id":"31d56cd3-1f5c-48b4-adcd-b8edf3bed45f","type":"ColumnDataSource"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"46e55b8c-5ad3-4771-a9f8-34b5e0f6d493","type":"Rect"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"shared_receipt_with_poi"}],"color":["#f22c40"],"features":["shared_receipt_with_poi"],"fill_alpha":[0.8],"height":[2.40386464353768],"label":[{"features":"shared_receipt_with_poi"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["shared_receipt_with_poi"],"y":[1.20193232176884]}},"id":"45d2f04e-4dd2-437c-9506-4f79edbb893b","type":"ColumnDataSource"},{"attributes":{"data_source":{"id":"e10f60ba-7a3e-4201-94c1-d377920d1dc9","type":"ColumnDataSource"},"glyph":{"id":"2277c790-c8a4-4032-b348-3c6c270c1e40","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"9fbbd561-ceda-4524-bb46-ae56035d2044","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"fecab180-4b76-4cd7-b0ed-4301a9d6116c","type":"Rect"},{"attributes":{"data_source":{"id":"45d2f04e-4dd2-437c-9506-4f79edbb893b","type":"ColumnDataSource"},"glyph":{"id":"62b4a71e-cffd-4e82-9ed8-8f5f4fd8b784","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"b5b63eaa-cf6b-4bc0-abe1-e6d4e0df31ff","type":"GlyphRenderer"},{"attributes":{"plot":{"id":"06af22d2-b756-4153-8052-6c9374a70583","subtype":"Chart","type":"Plot"}},"id":"5cfd04ee-a4b9-4842-9ce6-4b10e58e4cdc","type":"SaveTool"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"2277c790-c8a4-4032-b348-3c6c270c1e40","type":"Rect"},{"attributes":{"data_source":{"id":"ea6b1cba-96e3-4ca5-a664-4b7329aa67c4","type":"ColumnDataSource"},"glyph":{"id":"e6c30ba9-7202-4532-8989-fa7839935abe","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"0214e490-3013-4639-9982-76a7583c5249","type":"GlyphRenderer"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"exercised_stock_options"}],"color":["#f22c40"],"features":["exercised_stock_options"],"fill_alpha":[0.8],"height":[5.740357181466678],"label":[{"features":"exercised_stock_options"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["exercised_stock_options"],"y":[2.870178590733339]}},"id":"ea6b1cba-96e3-4ca5-a664-4b7329aa67c4","type":"ColumnDataSource"},{"attributes":{"dimension":1,"plot":{"id":"06af22d2-b756-4153-8052-6c9374a70583","subtype":"Chart","type":"Plot"},"ticker":{"id":"4d958945-9932-459f-8ad7-a0076bed697c","type":"BasicTicker"}},"id":"1cb798ce-719f-4802-bc38-b7a564f5eb6c","type":"Grid"},{"attributes":{},"id":"fe2134ff-488a-47ea-b775-f331f29134fc","type":"CategoricalTicker"},{"attributes":{"data_source":{"id":"93a83248-d4fb-461d-a9b3-feb317b29ba9","type":"ColumnDataSource"},"glyph":{"id":"b531b425-0e35-4ab8-b416-1d90fad0c031","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"c7780852-cccd-4e3a-984b-7048a1b6df63","type":"GlyphRenderer"},{"attributes":{"plot":{"id":"06af22d2-b756-4153-8052-6c9374a70583","subtype":"Chart","type":"Plot"}},"id":"902b46ab-ca10-4195-8b49-b52c9ec006d2","type":"HelpTool"},{"attributes":{"data_source":{"id":"9c387ce1-c82b-49e4-b545-b682481d65d9","type":"ColumnDataSource"},"glyph":{"id":"f7fbc97b-0ca0-4d4a-a66a-84ebb6418d4e","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"9fe3123c-ab01-4f18-9a96-85e9e78682e7","type":"GlyphRenderer"},{"attributes":{},"id":"02793888-acf5-4769-998a-8ede48cad23b","type":"ToolEvents"},{"attributes":{},"id":"4d958945-9932-459f-8ad7-a0076bed697c","type":"BasicTicker"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"f7fbc97b-0ca0-4d4a-a66a-84ebb6418d4e","type":"Rect"},{"attributes":{"data_source":{"id":"31d56cd3-1f5c-48b4-adcd-b8edf3bed45f","type":"ColumnDataSource"},"glyph":{"id":"fecab180-4b76-4cd7-b0ed-4301a9d6116c","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"f81af655-d4bc-49cf-bdf9-ca54d1e3b4fd","type":"GlyphRenderer"},{"attributes":{"below":[{"id":"a19a8cdb-3d67-4df8-b685-298f1652c464","type":"CategoricalAxis"}],"css_classes":null,"left":[{"id":"0a501f34-2f79-4e93-9254-f5d450236724","type":"LinearAxis"}],"plot_height":450,"plot_width":450,"renderers":[{"id":"b54142e0-dea2-4c46-b471-a917e882f0c7","type":"BoxAnnotation"},{"id":"59b8e02d-886d-460f-b9a5-8448de527f19","type":"GlyphRenderer"},{"id":"0214e490-3013-4639-9982-76a7583c5249","type":"GlyphRenderer"},{"id":"544cf2f2-69ab-444f-8980-4fdc11df2998","type":"GlyphRenderer"},{"id":"9fe3123c-ab01-4f18-9a96-85e9e78682e7","type":"GlyphRenderer"},{"id":"4daa001a-0d30-4832-8e06-f7f171b7a1b1","type":"GlyphRenderer"},{"id":"c76bf6dc-8029-491f-b4f5-81c98d8cd031","type":"GlyphRenderer"},{"id":"b5b63eaa-cf6b-4bc0-abe1-e6d4e0df31ff","type":"GlyphRenderer"},{"id":"c7780852-cccd-4e3a-984b-7048a1b6df63","type":"GlyphRenderer"},{"id":"f81af655-d4bc-49cf-bdf9-ca54d1e3b4fd","type":"GlyphRenderer"},{"id":"9fbbd561-ceda-4524-bb46-ae56035d2044","type":"GlyphRenderer"},{"id":"48523c06-4182-459a-80aa-e78e01f357ac","type":"GlyphRenderer"},{"id":"a19a8cdb-3d67-4df8-b685-298f1652c464","type":"CategoricalAxis"},{"id":"0a501f34-2f79-4e93-9254-f5d450236724","type":"LinearAxis"},{"id":"1cb798ce-719f-4802-bc38-b7a564f5eb6c","type":"Grid"}],"title":{"id":"3fa81cbe-292c-47b6-b72e-53640521b0a8","type":"Title"},"tool_events":{"id":"02793888-acf5-4769-998a-8ede48cad23b","type":"ToolEvents"},"toolbar":{"id":"96e8558a-5bb6-45e2-a39e-d1e7a1c3cf68","type":"Toolbar"},"x_mapper_type":"auto","x_range":{"id":"80b93c63-cad1-45d9-88f0-efa51bf9a2f5","type":"FactorRange"},"y_mapper_type":"auto","y_range":{"id":"3298f731-2799-4227-97e7-6afedb452267","type":"Range1d"}},"id":"06af22d2-b756-4153-8052-6c9374a70583","subtype":"Chart","type":"Plot"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"fraction_to_poi"}],"color":["#f22c40"],"features":["fraction_to_poi"],"fill_alpha":[0.8],"height":[1.347671283812072],"label":[{"features":"fraction_to_poi"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["fraction_to_poi"],"y":[0.673835641906036]}},"id":"e10f60ba-7a3e-4201-94c1-d377920d1dc9","type":"ColumnDataSource"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"bonus"}],"color":["#f22c40"],"features":["bonus"],"fill_alpha":[0.8],"height":[4.958094860652936],"label":[{"features":"bonus"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["bonus"],"y":[2.479047430326468]}},"id":"59871651-5ded-4053-a5c3-e45d12bd1b99","type":"ColumnDataSource"},{"attributes":{"overlay":{"id":"b54142e0-dea2-4c46-b471-a917e882f0c7","type":"BoxAnnotation"},"plot":{"id":"06af22d2-b756-4153-8052-6c9374a70583","subtype":"Chart","type":"Plot"}},"id":"221a25fd-43f9-499b-90c3-be5c3d1b6af9","type":"BoxZoomTool"},{"attributes":{"plot":{"id":"06af22d2-b756-4153-8052-6c9374a70583","subtype":"Chart","type":"Plot"}},"id":"ad9186c3-3079-4808-812e-578491d4b10b","type":"WheelZoomTool"},{"attributes":{"plot":{"id":"06af22d2-b756-4153-8052-6c9374a70583","subtype":"Chart","type":"Plot"}},"id":"7d3660af-5d58-4398-aaf3-30400cc8c2cc","type":"PanTool"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"e6c30ba9-7202-4532-8989-fa7839935abe","type":"Rect"},{"attributes":{"axis_label":"Sum( Scores )","formatter":{"id":"bf2555c3-f5fb-45ed-be26-bd11b79cb632","type":"BasicTickFormatter"},"plot":{"id":"06af22d2-b756-4153-8052-6c9374a70583","subtype":"Chart","type":"Plot"},"ticker":{"id":"4d958945-9932-459f-8ad7-a0076bed697c","type":"BasicTicker"}},"id":"0a501f34-2f79-4e93-9254-f5d450236724","type":"LinearAxis"}],"root_ids":["06af22d2-b756-4153-8052-6c9374a70583"]},"title":"Bokeh Application","version":"0.12.4"}};
-            var render_items = [{"docid":"38c45181-bfeb-4421-b620-605aa15aba63","elementid":"d9e3834c-2a45-41f2-b0c2-e9ee655a60d5","modelid":"06af22d2-b756-4153-8052-6c9374a70583"}];
+            var docs_json = {"e9427749-e5c6-4e04-a468-bb23bd226025":{"roots":{"references":[{"attributes":{"data_source":{"id":"dc50ed69-c41d-42eb-85a8-a228d9639055","type":"ColumnDataSource"},"glyph":{"id":"8bf1d331-4218-4a6e-a401-2b243b63032f","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"720b3860-38ee-4d50-abdf-c404ae2073e2","type":"GlyphRenderer"},{"attributes":{"plot":{"id":"d877e968-8694-40d8-94a4-92f4562829f6","subtype":"Chart","type":"Plot"}},"id":"d186ab2f-f2ed-4c92-b20f-e26485824c11","type":"SaveTool"},{"attributes":{"data_source":{"id":"12b5d4e0-eab0-428c-88bf-d94236235749","type":"ColumnDataSource"},"glyph":{"id":"a39c21fd-5bbe-4642-97b5-a9179f2edbf8","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"7dceb872-5abf-46a2-8dfa-a7f636b0cadf","type":"GlyphRenderer"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"expenses"}],"color":["#f22c40"],"features":["expenses"],"fill_alpha":[0.8],"height":[6.094173310638945],"label":[{"features":"expenses"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["expenses"],"y":[3.0470866553194726]}},"id":"a213c416-9418-4d6d-9913-0deb2a98fe33","type":"ColumnDataSource"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"5f4fd604-43b0-49dd-88a0-c6a5a049a736","type":"Rect"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"from_poi_to_this_person"}],"color":["#f22c40"],"features":["from_poi_to_this_person"],"fill_alpha":[0.8],"height":[5.243449713374958],"label":[{"features":"from_poi_to_this_person"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["from_poi_to_this_person"],"y":[2.621724856687479]}},"id":"52586259-11bd-4f27-8011-a70105ab9404","type":"ColumnDataSource"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"0815f727-87ea-4234-90b2-78adbc4200a5","type":"Rect"},{"attributes":{"plot":null,"text":"Select K Best"},"id":"a551e9df-1fe4-4f1b-9e82-f43b64647beb","type":"Title"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"f3921fb3-5b16-4bb4-8f8f-1f335cb2d66e","type":"Rect"},{"attributes":{"data_source":{"id":"17e07365-8b6b-4824-a6b8-5a91f282de0c","type":"ColumnDataSource"},"glyph":{"id":"f3921fb3-5b16-4bb4-8f8f-1f335cb2d66e","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"a5bd4c38-a61e-4a49-9911-27bf5ffae6e0","type":"GlyphRenderer"},{"attributes":{},"id":"76fff01b-6ba0-4c78-b1c9-2531dbf56972","type":"ToolEvents"},{"attributes":{"data_source":{"id":"d283d89c-ba11-43c7-bba8-2d20aa153e1c","type":"ColumnDataSource"},"glyph":{"id":"96370bdc-9049-4da3-b185-585fbc465449","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"b538e9d8-8210-4aff-a7fa-b7bbef6cb298","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"a39c21fd-5bbe-4642-97b5-a9179f2edbf8","type":"Rect"},{"attributes":{"data_source":{"id":"493b425f-ac95-4f93-b8e0-9f965f12843b","type":"ColumnDataSource"},"glyph":{"id":"0815f727-87ea-4234-90b2-78adbc4200a5","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"f0cc9b19-a558-4ac4-acb8-33e765a6b78f","type":"GlyphRenderer"},{"attributes":{"plot":{"id":"d877e968-8694-40d8-94a4-92f4562829f6","subtype":"Chart","type":"Plot"}},"id":"96f09ba0-0ad3-4c83-8df5-6205d8b7cd69","type":"HelpTool"},{"attributes":{"plot":{"id":"d877e968-8694-40d8-94a4-92f4562829f6","subtype":"Chart","type":"Plot"}},"id":"055f9554-ec35-4adb-8502-b50c50472ee2","type":"WheelZoomTool"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"total_payments"}],"color":["#f22c40"],"features":["total_payments"],"fill_alpha":[0.8],"height":[8.772777730091676],"label":[{"features":"total_payments"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["total_payments"],"y":[4.386388865045838]}},"id":"915aea77-486c-43b8-be2e-6823b4e16bb1","type":"ColumnDataSource"},{"attributes":{"below":[{"id":"1eb44d02-cf3f-4f78-afae-e694edc5c4a8","type":"CategoricalAxis"}],"css_classes":null,"left":[{"id":"eaaba7b9-970e-4072-8ac6-71d86bd3f2c0","type":"LinearAxis"}],"plot_height":450,"plot_width":850,"renderers":[{"id":"6f46e6fe-2a37-4ac4-8a56-2b83df314850","type":"BoxAnnotation"},{"id":"b538e9d8-8210-4aff-a7fa-b7bbef6cb298","type":"GlyphRenderer"},{"id":"3b15b032-8194-433a-8c0c-b12e5a44cfd4","type":"GlyphRenderer"},{"id":"9d576ee3-a8c9-4522-a9e8-5184dc5a3ef8","type":"GlyphRenderer"},{"id":"f6a4c5b7-4051-42cc-9104-15999cb22ff9","type":"GlyphRenderer"},{"id":"720b3860-38ee-4d50-abdf-c404ae2073e2","type":"GlyphRenderer"},{"id":"bb6b80cb-85f6-4325-a78b-ed7367349c9c","type":"GlyphRenderer"},{"id":"7dceb872-5abf-46a2-8dfa-a7f636b0cadf","type":"GlyphRenderer"},{"id":"43c2161e-88a1-45f8-896f-bebdfa5e5a3e","type":"GlyphRenderer"},{"id":"98a609a2-34b2-40bc-818f-8e149aa45b4d","type":"GlyphRenderer"},{"id":"436585f0-b9b0-446c-b80c-55d60bf11867","type":"GlyphRenderer"},{"id":"a5bd4c38-a61e-4a49-9911-27bf5ffae6e0","type":"GlyphRenderer"},{"id":"f0cc9b19-a558-4ac4-acb8-33e765a6b78f","type":"GlyphRenderer"},{"id":"faf4a2e5-417f-48fb-98a2-434ac922f2f3","type":"GlyphRenderer"},{"id":"35f38917-a3eb-4a12-96f4-9fcc1db4b82f","type":"GlyphRenderer"},{"id":"1eb44d02-cf3f-4f78-afae-e694edc5c4a8","type":"CategoricalAxis"},{"id":"eaaba7b9-970e-4072-8ac6-71d86bd3f2c0","type":"LinearAxis"},{"id":"d37ca6ee-ebae-4af4-beaa-d14bf20d9ab8","type":"Grid"}],"title":{"id":"a551e9df-1fe4-4f1b-9e82-f43b64647beb","type":"Title"},"tool_events":{"id":"76fff01b-6ba0-4c78-b1c9-2531dbf56972","type":"ToolEvents"},"toolbar":{"id":"7f595701-61ac-43a3-b580-c11bae55934e","type":"Toolbar"},"x_mapper_type":"auto","x_range":{"id":"12fef8cb-35ce-48d6-9cc2-92f96d5cb155","type":"FactorRange"},"y_mapper_type":"auto","y_range":{"id":"f1cd7f77-27cc-48e5-b5fa-654875b32ff2","type":"Range1d"}},"id":"d877e968-8694-40d8-94a4-92f4562829f6","subtype":"Chart","type":"Plot"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"shared_receipt_with_poi"}],"color":["#f22c40"],"features":["shared_receipt_with_poi"],"fill_alpha":[0.8],"height":[8.589420731682381],"label":[{"features":"shared_receipt_with_poi"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["shared_receipt_with_poi"],"y":[4.2947103658411905]}},"id":"12b5d4e0-eab0-428c-88bf-d94236235749","type":"ColumnDataSource"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"7b64675e-13d7-4a96-8ca2-ae290cdc2ddd","type":"Rect"},{"attributes":{"data_source":{"id":"52586259-11bd-4f27-8011-a70105ab9404","type":"ColumnDataSource"},"glyph":{"id":"4b11659b-93f3-422f-bf8b-f12fc97a6f7a","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"35f38917-a3eb-4a12-96f4-9fcc1db4b82f","type":"GlyphRenderer"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"total_stock_value"}],"color":["#f22c40"],"features":["total_stock_value"],"fill_alpha":[0.8],"height":[24.18289867856688],"label":[{"features":"total_stock_value"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["total_stock_value"],"y":[12.09144933928344]}},"id":"f5c6753a-701a-4fbc-81f2-b69ec43ad816","type":"ColumnDataSource"},{"attributes":{"axis_label":"Features","formatter":{"id":"c48cb35e-6a56-4c5d-8286-bb2e255693ff","type":"CategoricalTickFormatter"},"major_label_orientation":0.7853981633974483,"plot":{"id":"d877e968-8694-40d8-94a4-92f4562829f6","subtype":"Chart","type":"Plot"},"ticker":{"id":"22e41aaa-c9d8-48da-9e16-3547f2bc6b56","type":"CategoricalTicker"}},"id":"1eb44d02-cf3f-4f78-afae-e694edc5c4a8","type":"CategoricalAxis"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"4b11659b-93f3-422f-bf8b-f12fc97a6f7a","type":"Rect"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"long_term_incentive"}],"color":["#f22c40"],"features":["long_term_incentive"],"fill_alpha":[0.8],"height":[9.922186013189823],"label":[{"features":"long_term_incentive"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["long_term_incentive"],"y":[4.961093006594911]}},"id":"e90615f4-c968-4bb5-89cd-e4641e3f1c39","type":"ColumnDataSource"},{"attributes":{"data_source":{"id":"915aea77-486c-43b8-be2e-6823b4e16bb1","type":"ColumnDataSource"},"glyph":{"id":"5f4fd604-43b0-49dd-88a0-c6a5a049a736","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"3b15b032-8194-433a-8c0c-b12e5a44cfd4","type":"GlyphRenderer"},{"attributes":{"data_source":{"id":"e4fbdc42-4704-4401-96ff-d2a23cebb9e1","type":"ColumnDataSource"},"glyph":{"id":"83eb1fc3-76d9-4604-89ee-7d5e76205b3c","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"436585f0-b9b0-446c-b80c-55d60bf11867","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"3fca79a2-0376-415e-9a82-8384eecb9cfb","type":"Rect"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"other"}],"color":["#f22c40"],"features":["other"],"fill_alpha":[0.8],"height":[4.187477506995375],"label":[{"features":"other"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["other"],"y":[2.0937387534976875]}},"id":"f88ad44e-9771-4241-998c-905670b403bd","type":"ColumnDataSource"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"from_messages"}],"color":["#f22c40"],"features":["from_messages"],"fill_alpha":[0.8],"height":[0.16970094762175533],"label":[{"features":"from_messages"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["from_messages"],"y":[0.08485047381087767]}},"id":"17e07365-8b6b-4824-a6b8-5a91f282de0c","type":"ColumnDataSource"},{"attributes":{"overlay":{"id":"6f46e6fe-2a37-4ac4-8a56-2b83df314850","type":"BoxAnnotation"},"plot":{"id":"d877e968-8694-40d8-94a4-92f4562829f6","subtype":"Chart","type":"Plot"}},"id":"154e4b4b-6e67-4b2e-bbb9-b9d7578d0996","type":"BoxZoomTool"},{"attributes":{"data_source":{"id":"a213c416-9418-4d6d-9913-0deb2a98fe33","type":"ColumnDataSource"},"glyph":{"id":"3fca79a2-0376-415e-9a82-8384eecb9cfb","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"98a609a2-34b2-40bc-818f-8e149aa45b4d","type":"GlyphRenderer"},{"attributes":{"dimension":1,"plot":{"id":"d877e968-8694-40d8-94a4-92f4562829f6","subtype":"Chart","type":"Plot"},"ticker":{"id":"569708de-900a-4aa0-9ea1-7fb78cf6693e","type":"BasicTicker"}},"id":"d37ca6ee-ebae-4af4-beaa-d14bf20d9ab8","type":"Grid"},{"attributes":{},"id":"c48cb35e-6a56-4c5d-8286-bb2e255693ff","type":"CategoricalTickFormatter"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"3a80f6b0-dcb8-4adb-9251-ecc97cece5f2","type":"Rect"},{"attributes":{},"id":"22e41aaa-c9d8-48da-9e16-3547f2bc6b56","type":"CategoricalTicker"},{"attributes":{"data_source":{"id":"554293ed-101c-44d3-ac3a-b0d49739dfbc","type":"ColumnDataSource"},"glyph":{"id":"f95095b1-9868-47ae-91ed-91cf115c54b2","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"9d576ee3-a8c9-4522-a9e8-5184dc5a3ef8","type":"GlyphRenderer"},{"attributes":{"data_source":{"id":"f88ad44e-9771-4241-998c-905670b403bd","type":"ColumnDataSource"},"glyph":{"id":"29eaa316-c1ac-4030-92a0-7e7819e4159e","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"bb6b80cb-85f6-4325-a78b-ed7367349c9c","type":"GlyphRenderer"},{"attributes":{},"id":"0d4f9778-57bc-4804-9d25-b3c6abb573bd","type":"BasicTickFormatter"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"6f46e6fe-2a37-4ac4-8a56-2b83df314850","type":"BoxAnnotation"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"29eaa316-c1ac-4030-92a0-7e7819e4159e","type":"Rect"},{"attributes":{"data_source":{"id":"f5c6753a-701a-4fbc-81f2-b69ec43ad816","type":"ColumnDataSource"},"glyph":{"id":"3a80f6b0-dcb8-4adb-9251-ecc97cece5f2","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"43c2161e-88a1-45f8-896f-bebdfa5e5a3e","type":"GlyphRenderer"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"bonus"}],"color":["#f22c40"],"features":["bonus"],"fill_alpha":[0.8],"height":[20.792252047181535],"label":[{"features":"bonus"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["bonus"],"y":[10.396126023590767]}},"id":"660c0595-677c-4a93-aa04-ac90ff6cbe0b","type":"ColumnDataSource"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"f95095b1-9868-47ae-91ed-91cf115c54b2","type":"Rect"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"f7c480bd-1298-473e-b733-0bac7b23db71","type":"Rect"},{"attributes":{"plot":{"id":"d877e968-8694-40d8-94a4-92f4562829f6","subtype":"Chart","type":"Plot"}},"id":"845bca10-0653-445b-9b6c-192957438ef1","type":"PanTool"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"restricted_stock"}],"color":["#f22c40"],"features":["restricted_stock"],"fill_alpha":[0.8],"height":[9.2128106219771],"label":[{"features":"restricted_stock"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["restricted_stock"],"y":[4.60640531098855]}},"id":"dc50ed69-c41d-42eb-85a8-a228d9639055","type":"ColumnDataSource"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"from_this_person_to_poi"}],"color":["#f22c40"],"features":["from_this_person_to_poi"],"fill_alpha":[0.8],"height":[2.382612108227674],"label":[{"features":"from_this_person_to_poi"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["from_this_person_to_poi"],"y":[1.191306054113837]}},"id":"493b425f-ac95-4f93-b8e0-9f965f12843b","type":"ColumnDataSource"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"loan_advances"}],"color":["#f22c40"],"features":["loan_advances"],"fill_alpha":[0.8],"height":[7.184055658288725],"label":[{"features":"loan_advances"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["loan_advances"],"y":[3.5920278291443624]}},"id":"e4fbdc42-4704-4401-96ff-d2a23cebb9e1","type":"ColumnDataSource"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"96370bdc-9049-4da3-b185-585fbc465449","type":"Rect"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"83eb1fc3-76d9-4604-89ee-7d5e76205b3c","type":"Rect"},{"attributes":{"data_source":{"id":"660c0595-677c-4a93-aa04-ac90ff6cbe0b","type":"ColumnDataSource"},"glyph":{"id":"7b64675e-13d7-4a96-8ca2-ae290cdc2ddd","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"f6a4c5b7-4051-42cc-9104-15999cb22ff9","type":"GlyphRenderer"},{"attributes":{"data_source":{"id":"e90615f4-c968-4bb5-89cd-e4641e3f1c39","type":"ColumnDataSource"},"glyph":{"id":"f7c480bd-1298-473e-b733-0bac7b23db71","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"faf4a2e5-417f-48fb-98a2-434ac922f2f3","type":"GlyphRenderer"},{"attributes":{},"id":"569708de-900a-4aa0-9ea1-7fb78cf6693e","type":"BasicTicker"},{"attributes":{"callback":null,"end":26.055833719879104},"id":"f1cd7f77-27cc-48e5-b5fa-654875b32ff2","type":"Range1d"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"8bf1d331-4218-4a6e-a401-2b243b63032f","type":"Rect"},{"attributes":{"plot":{"id":"d877e968-8694-40d8-94a4-92f4562829f6","subtype":"Chart","type":"Plot"}},"id":"aa6e9d91-5ee4-4280-b216-43487f26294e","type":"ResetTool"},{"attributes":{"callback":null,"factors":["bonus","exercised_stock_options","expenses","from_messages","from_poi_to_this_person","from_this_person_to_poi","loan_advances","long_term_incentive","other","restricted_stock","salary","shared_receipt_with_poi","total_payments","total_stock_value"]},"id":"12fef8cb-35ce-48d6-9cc2-92f96d5cb155","type":"FactorRange"},{"attributes":{"axis_label":"Sum( Scores )","formatter":{"id":"0d4f9778-57bc-4804-9d25-b3c6abb573bd","type":"BasicTickFormatter"},"plot":{"id":"d877e968-8694-40d8-94a4-92f4562829f6","subtype":"Chart","type":"Plot"},"ticker":{"id":"569708de-900a-4aa0-9ea1-7fb78cf6693e","type":"BasicTicker"}},"id":"eaaba7b9-970e-4072-8ac6-71d86bd3f2c0","type":"LinearAxis"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"exercised_stock_options"}],"color":["#f22c40"],"features":["exercised_stock_options"],"fill_alpha":[0.8],"height":[24.815079733218194],"label":[{"features":"exercised_stock_options"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["exercised_stock_options"],"y":[12.407539866609097]}},"id":"554293ed-101c-44d3-ac3a-b0d49739dfbc","type":"ColumnDataSource"},{"attributes":{"callback":null,"column_names":["line_color","line_alpha","color","fill_alpha","height","width","y","x","label"],"data":{"chart_index":[{"features":"salary"}],"color":["#f22c40"],"features":["salary"],"fill_alpha":[0.8],"height":[18.289684043404513],"label":[{"features":"salary"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["salary"],"y":[9.144842021702257]}},"id":"d283d89c-ba11-43c7-bba8-2d20aa153e1c","type":"ColumnDataSource"},{"attributes":{"active_drag":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"845bca10-0653-445b-9b6c-192957438ef1","type":"PanTool"},{"id":"055f9554-ec35-4adb-8502-b50c50472ee2","type":"WheelZoomTool"},{"id":"154e4b4b-6e67-4b2e-bbb9-b9d7578d0996","type":"BoxZoomTool"},{"id":"d186ab2f-f2ed-4c92-b20f-e26485824c11","type":"SaveTool"},{"id":"aa6e9d91-5ee4-4280-b216-43487f26294e","type":"ResetTool"},{"id":"96f09ba0-0ad3-4c83-8df5-6205d8b7cd69","type":"HelpTool"}]},"id":"7f595701-61ac-43a3-b580-c11bae55934e","type":"Toolbar"}],"root_ids":["d877e968-8694-40d8-94a4-92f4562829f6"]},"title":"Bokeh Application","version":"0.12.4"}};
+            var render_items = [{"docid":"e9427749-e5c6-4e04-a468-bb23bd226025","elementid":"7bd9d2d1-36a0-4f9e-8c1e-6e70052835d0","modelid":"d877e968-8694-40d8-94a4-92f4562829f6"}];
             
             Bokeh.embed.embed_items(docs_json, render_items);
           };
@@ -13254,7 +13357,7 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
         console.log("Bokeh: BokehJS failed to load within specified timeout.");
         window._bokeh_failed_load = true;
       } else if (force !== true) {
-        var cell = $(document.getElementById("d9e3834c-2a45-41f2-b0c2-e9ee655a60d5")).parents('.cell').data().cell;
+        var cell = $(document.getElementById("7bd9d2d1-36a0-4f9e-8c1e-6e70052835d0")).parents('.cell').data().cell;
         cell.output_area.append_execute_result(NB_LOAD_WARNING)
       }
   
@@ -13281,17 +13384,29 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">### Extract features and labels from dataset for local testing</span>
-<span class="n">features_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;poi&#39;</span><span class="p">,</span> <span class="s1">&#39;bonus&#39;</span><span class="p">,</span> <span class="s1">&#39;exercised_stock_options&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">,</span> <span class="s1">&#39;total_stock_value&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;shared_receipt_with_poi&#39;</span><span class="p">,</span> <span class="s1">&#39;total_payments&#39;</span><span class="p">,</span> <span class="s1">&#39;fraction_to_poi&#39;</span><span class="p">,</span> <span class="s1">&#39;fraction_from_poi&#39;</span><span class="p">]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">featureFormat</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">,</span> <span class="n">features_list</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">labels</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="n">targetFeatureSplit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">enron_data</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(144, 23)</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13301,16 +13416,34 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Task-4:-Try-a-varity-of-classifiers">Task 4: Try a varity of classifiers<a class="anchor-link" href="#Task-4:-Try-a-varity-of-classifiers">&#182;</a></h3>
+<p>Univariate feature selection works by selecting the best features based on univariate statistical tests. I have done it as a preprocessing step for inputting best features into all the classifiers.</p>
+<p>SelectKBest removes all but the k highest scoring features, I have chosen the k value = 5 because there are too many features like loan_advances, other, restricted_stock, shared_receipt_with_poi, from_this_person_to_poi, from_poi_to_this_person, from_messages, adding too many features will not add much value into our estimator but having all good few features will. So I finally selected 5 best features: 'bonus', 'exercised_stock_options', 'salary', 'total_stock_value', 'total_payments' and two engineered features: 'fraction_from_poi', 'fraction_to_poi' as final features for classification. In the 5 best features via SelectKBest, I chose 'total_payments' over 'long_term_incentive' because in the dataset there are 79 NULL/0's for long_term_incentive feature out of total 144 this does not look right. While there are 121 complete values for total_payments feature.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Task-4:-Try-a-variety-of-classifiers">Task 4: Try a variety of classifiers<a class="anchor-link" href="#Task-4:-Try-a-variety-of-classifiers">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Separating training and test dataset</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">### Extract features and labels from dataset for local testing</span>
+<span class="n">features_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;poi&#39;</span><span class="p">,</span> <span class="s1">&#39;bonus&#39;</span><span class="p">,</span> <span class="s1">&#39;exercised_stock_options&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">,</span> <span class="s1">&#39;total_stock_value&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;total_payments&#39;</span><span class="p">,</span> <span class="s1">&#39;fraction_from_poi&#39;</span><span class="p">,</span> <span class="s1">&#39;fraction_to_poi&#39;</span><span class="p">]</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">featureFormat</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">,</span> <span class="n">features_list</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">labels</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="n">targetFeatureSplit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1">#Separating training and test dataset</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="n">features_train</span><span class="p">,</span> <span class="n">features_test</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">,</span> <span class="n">labels_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">classification_report</span>
@@ -13332,19 +13465,20 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
-<span class="n">nb</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="c1">#I have specified prior proability as 0.3 and 0.7 because we have imbalanced distribution of POI/Non-POI values.</span>
+<span class="n">nb</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">(</span><span class="n">priors</span><span class="o">=</span><span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">])</span>
 <span class="n">nb</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features_train</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">)</span>
 <span class="n">nb_labels_predicted</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
 
 <span class="n">nb_accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">nb_labels_predicted</span><span class="p">)</span>
 <span class="n">nb_classification_report</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">nb_labels_predicted</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Naive Bayes accuracy score: {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nb_accuracy</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Naive Bayes classification report:</span><span class="se">\n</span><span class="s2">{}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nb_classification_report</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;NaiveBayes accuracy score: {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nb_accuracy</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;NaiveBayes classification report:</span><span class="se">\n</span><span class="s2">{}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nb_classification_report</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -13357,14 +13491,14 @@ var element = $('#f4c29733-4be7-4b14-a308-31abaa2d6cb1');
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Naive Bayes accuracy score: 0.860465116279.
-Naive Bayes classification report:
+<pre>NaiveBayes accuracy score: 0.883720930233.
+NaiveBayes classification report:
              precision    recall  f1-score   support
 
-        0.0       0.92      0.92      0.92        38
-        1.0       0.40      0.40      0.40         5
+        0.0       0.97      0.89      0.93        38
+        1.0       0.50      0.80      0.62         5
 
-avg / total       0.86      0.86      0.86        43
+avg / total       0.92      0.88      0.89        43
 .
 </pre>
 </div>
@@ -13385,7 +13519,7 @@ avg / total       0.86      0.86      0.86        43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
@@ -13448,19 +13582,19 @@ Precision and F-score are ill-defined and being set to 0.0 in labels with no pre
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">AdaBoostClassifier</span>
-<span class="n">adaboost</span> <span class="o">=</span> <span class="n">AdaBoostClassifier</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;SAMME.R&#39;</span><span class="p">)</span>
-<span class="n">adaboost</span> <span class="o">=</span> <span class="n">adaboost</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features_train</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">)</span>
-<span class="n">adaboost_labels_predicted</span> <span class="o">=</span> <span class="n">adaboost</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
+<span class="n">adab</span> <span class="o">=</span> <span class="n">AdaBoostClassifier</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;SAMME.R&#39;</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">adab</span> <span class="o">=</span> <span class="n">adab</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features_train</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">)</span>
+<span class="n">adab_labels_predicted</span> <span class="o">=</span> <span class="n">adab</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
 
-<span class="n">adaboost_accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">adaboost_labels_predicted</span><span class="p">)</span>
-<span class="n">adaboost_classification_report</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">adaboost_labels_predicted</span><span class="p">)</span>
+<span class="n">adab_accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">adab_labels_predicted</span><span class="p">)</span>
+<span class="n">adab_classification_report</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">adab_labels_predicted</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;AdaBoost accuracy score: {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">adaboost_accuracy</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;AdaBoost classification report:</span><span class="se">\n</span><span class="s2">{}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">adaboost_classification_report</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;AdaBoost accuracy score: {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">adab_accuracy</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;AdaBoost classification report:</span><span class="se">\n</span><span class="s2">{}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">adab_classification_report</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -13473,14 +13607,14 @@ Precision and F-score are ill-defined and being set to 0.0 in labels with no pre
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>AdaBoost accuracy score: 0.813953488372.
+<pre>AdaBoost accuracy score: 0.860465116279.
 AdaBoost classification report:
              precision    recall  f1-score   support
 
-        0.0       0.88      0.92      0.90        38
-        1.0       0.00      0.00      0.00         5
+        0.0       0.90      0.95      0.92        38
+        1.0       0.33      0.20      0.25         5
 
-avg / total       0.77      0.81      0.79        43
+avg / total       0.83      0.86      0.84        43
 .
 </pre>
 </div>
@@ -13495,25 +13629,25 @@ avg / total       0.77      0.81      0.79        43
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Random-Forest">Random Forest<a class="anchor-link" href="#Random-Forest">&#182;</a></h4>
+<h4 id="K-Nearest-Neighbors">K Nearest Neighbors<a class="anchor-link" href="#K-Nearest-Neighbors">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
-<span class="n">rf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;entropy&#39;</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">rf</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features_train</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">)</span>
-<span class="n">rf_labels_predicted</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features_train</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">)</span>
+<span class="n">knn_labels_predicted</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
 
-<span class="n">rf_accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">rf_labels_predicted</span><span class="p">)</span>
-<span class="n">rf_classification_report</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">rf_labels_predicted</span><span class="p">)</span>
+<span class="n">knn_accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">knn_labels_predicted</span><span class="p">)</span>
+<span class="n">knn_classification_report</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">knn_labels_predicted</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Random Forest accuracy score: {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rf_accuracy</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Random Forest classification report:</span><span class="se">\n</span><span class="s2">{}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rf_classification_report</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;KNearestNeighbors accuracy score: {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">knn_accuracy</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;KNearestNeighbors classification report:</span><span class="se">\n</span><span class="s2">{}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">knn_classification_report</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -13526,17 +13660,89 @@ avg / total       0.77      0.81      0.79        43
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Random Forest accuracy score: 0.860465116279.
-Random Forest classification report:
+<pre>KNearestNeighbors accuracy score: 0.906976744186.
+KNearestNeighbors classification report:
              precision    recall  f1-score   support
 
-        0.0       0.88      0.97      0.93        38
-        1.0       0.00      0.00      0.00         5
+        0.0       0.90      1.00      0.95        38
+        1.0       1.00      0.20      0.33         5
 
-avg / total       0.78      0.86      0.82        43
+avg / total       0.92      0.91      0.88        43
 .
 </pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_colwidth</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Before Feature Engineering and Selection&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;NaiveBayes Classifier Accuracy&#39;</span><span class="p">:</span> <span class="mf">0.8837</span><span class="p">,</span>
+                                                     <span class="s1">&#39;SVM Classifier Accuracy&#39;</span><span class="p">:</span> <span class="mf">0.8837</span><span class="p">,</span>
+                                                     <span class="s1">&#39;AdaBoost Classifier Accuracy&#39;</span><span class="p">:</span> <span class="mf">0.7906</span><span class="p">,</span>
+                                                     <span class="s1">&#39;KNearestNeighbors Classifier Accuracy&#39;</span><span class="p">:</span> <span class="mf">0.8837</span><span class="p">},</span>
+        <span class="s1">&#39;After Feature Engineering and Selection&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;NaiveBayes Classifier Accuracy&#39;</span><span class="p">:</span> <span class="mf">0.8837</span><span class="p">,</span>
+                                                   <span class="s1">&#39;SVM Classifier Accuracy&#39;</span><span class="p">:</span> <span class="mf">0.8837</span><span class="p">,</span>
+                                                   <span class="s1">&#39;AdaBoost Classifier Accuracy&#39;</span><span class="p">:</span> <span class="mf">0.9069</span><span class="p">,</span>
+                                                   <span class="s1">&#39;KNearestNeighbors Classifier Accuracy&#39;</span><span class="p">:</span> <span class="mf">0.9069</span><span class="p">}}</span>
+
+<span class="n">accuracy_comparison</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Before Feature Engineering and Selection&#39;</span><span class="p">,</span> <span class="s1">&#39;After Feature Engineering and Selection&#39;</span><span class="p">])</span>
+
+<span class="n">accuracy_comparison</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[20]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Before Feature Engineering and Selection</th>
+      <th>After Feature Engineering and Selection</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>AdaBoost Classifier Accuracy</th>
+      <td>0.7906</td>
+      <td>0.9069</td>
+    </tr>
+    <tr>
+      <th>KNearestNeighbors Classifier Accuracy</th>
+      <td>0.8837</td>
+      <td>0.9069</td>
+    </tr>
+    <tr>
+      <th>NaiveBayes Classifier Accuracy</th>
+      <td>0.8837</td>
+      <td>0.8837</td>
+    </tr>
+    <tr>
+      <th>SVM Classifier Accuracy</th>
+      <td>0.8837</td>
+      <td>0.8837</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
 </div>
 
 </div>
@@ -13557,7 +13763,7 @@ avg / total       0.78      0.86      0.82        43
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Picking-an-algorithm">Picking an algorithm<a class="anchor-link" href="#Picking-an-algorithm">&#182;</a></h4><p>Different algorithms were attempted using the 6 best features: 'bonus', 'exercised_stock_options', 'salary', 'total_stock_value', 'shared_receipt_with_poi', 'total_payments' and some of the engineered features: 'fraction_to_poi', 'fraction_from_poi'.</p>
+<h4 id="Picking-an-algorithm">Picking an algorithm<a class="anchor-link" href="#Picking-an-algorithm">&#182;</a></h4><p>Different algorithms were attempted using the 5 best features: 'bonus', 'exercised_stock_options', 'salary', 'total_stock_value', 'total_payments' and the engineered features: 'fraction_to_poi', 'fraction_from_poi'.</p>
 <p>Below is the comparison of algorithms implemented using above features:</p>
 
 </div>
@@ -13565,7 +13771,7 @@ avg / total       0.78      0.86      0.82        43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_colwidth</span> <span class="o">=</span> <span class="mi">0</span>
@@ -13573,16 +13779,16 @@ avg / total       0.78      0.86      0.82        43
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Algorithms&#39;</span><span class="p">:[</span><span class="s1">&#39;GaussianNaiveBayes Classifier&#39;</span><span class="p">,</span>
                       <span class="s1">&#39;SupportVectorMachines Classifier&#39;</span><span class="p">,</span>
                       <span class="s1">&#39;AdaBoost Classifier&#39;</span><span class="p">,</span>
-                      <span class="s1">&#39;RandomForst Classifier&#39;</span><span class="p">],</span>
-       <span class="s1">&#39;Parameters&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Default&quot;</span><span class="p">,</span>
+                      <span class="s1">&#39;KNearestNeighbors Classifier&#39;</span><span class="p">],</span>
+       <span class="s1">&#39;Parameters&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;priors=[0.3, 07]&quot;</span><span class="p">,</span>
                      <span class="s2">&quot;kernel=&#39;rbf&#39;, C=0.1, degree=3&quot;</span><span class="p">,</span>
-                      <span class="s2">&quot;learning_rate=0.1, algorithm=&#39;SAMME.R&quot;</span><span class="p">,</span>
-                      <span class="s2">&quot;criterion=&#39;entropy&#39;, min_samples_leaf=1, min_samples_split=2&quot;</span>
+                      <span class="s2">&quot;learning_rate=0.9, n_estimators=100, random_state=42&quot;</span><span class="p">,</span>
+                      <span class="s2">&quot;n_neighbors=3&quot;</span>
                      <span class="p">],</span>
-       <span class="s1">&#39;Accuracy&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.8604</span><span class="p">,</span> <span class="mf">0.8837</span><span class="p">,</span> <span class="mf">0.8139</span><span class="p">,</span> <span class="mf">0.8604</span><span class="p">],</span>
-       <span class="s1">&#39;Precision&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.86</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">,</span> <span class="mf">0.77</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">],</span>
-        <span class="s1">&#39;Recall&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.86</span><span class="p">,</span> <span class="mf">0.88</span><span class="p">,</span> <span class="mf">0.81</span><span class="p">,</span> <span class="mf">0.86</span><span class="p">],</span>
-        <span class="s1">&#39;F1&#39;</span><span class="p">:[</span><span class="mf">0.86</span><span class="p">,</span> <span class="mf">0.83</span><span class="p">,</span> <span class="mf">0.79</span><span class="p">,</span> <span class="mf">0.82</span><span class="p">]</span>
+       <span class="s1">&#39;Accuracy&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.8837</span><span class="p">,</span> <span class="mf">0.8837</span><span class="p">,</span> <span class="mf">0.9069</span><span class="p">,</span> <span class="mf">0.9069</span><span class="p">],</span>
+       <span class="s1">&#39;Precision&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.92</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">,</span> <span class="mf">0.83</span><span class="p">,</span> <span class="mf">0.89</span><span class="p">],</span>
+        <span class="s1">&#39;Recall&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.88</span><span class="p">,</span> <span class="mf">0.88</span><span class="p">,</span> <span class="mf">0.86</span><span class="p">,</span> <span class="mf">0.891</span><span class="p">],</span>
+        <span class="s1">&#39;F1&#39;</span><span class="p">:[</span><span class="mf">0.89</span><span class="p">,</span> <span class="mf">0.83</span><span class="p">,</span> <span class="mf">0.84</span><span class="p">,</span> <span class="mf">0.90</span><span class="p">]</span>
        <span class="p">}</span>
 
 <span class="n">algorithms</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Algorithms&#39;</span><span class="p">,</span> <span class="s1">&#39;Parameters&#39;</span><span class="p">,</span> <span class="s1">&#39;Accuracy&#39;</span><span class="p">,</span> <span class="s1">&#39;Precision&#39;</span><span class="p">,</span> <span class="s1">&#39;Recall&#39;</span><span class="p">,</span> <span class="s1">&#39;F1&#39;</span><span class="p">])</span>
@@ -13597,7 +13803,7 @@ avg / total       0.78      0.86      0.82        43
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[21]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -13617,11 +13823,11 @@ avg / total       0.78      0.86      0.82        43
     <tr>
       <th>0</th>
       <td>GaussianNaiveBayes Classifier</td>
-      <td>Default</td>
-      <td>0.8604</td>
-      <td>0.86</td>
-      <td>0.86</td>
-      <td>0.86</td>
+      <td>priors=[0.3, 07]</td>
+      <td>0.8837</td>
+      <td>0.92</td>
+      <td>0.880</td>
+      <td>0.89</td>
     </tr>
     <tr>
       <th>1</th>
@@ -13629,26 +13835,26 @@ avg / total       0.78      0.86      0.82        43
       <td>kernel='rbf', C=0.1, degree=3</td>
       <td>0.8837</td>
       <td>0.78</td>
-      <td>0.88</td>
+      <td>0.880</td>
       <td>0.83</td>
     </tr>
     <tr>
       <th>2</th>
       <td>AdaBoost Classifier</td>
-      <td>learning_rate=0.1, algorithm='SAMME.R</td>
-      <td>0.8139</td>
-      <td>0.77</td>
-      <td>0.81</td>
-      <td>0.79</td>
+      <td>learning_rate=0.9, n_estimators=100, random_state=42</td>
+      <td>0.9069</td>
+      <td>0.83</td>
+      <td>0.860</td>
+      <td>0.84</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>RandomForst Classifier</td>
-      <td>criterion='entropy', min_samples_leaf=1, min_samples_split=2</td>
-      <td>0.8604</td>
-      <td>0.78</td>
-      <td>0.86</td>
-      <td>0.82</td>
+      <td>KNearestNeighbors Classifier</td>
+      <td>n_neighbors=3</td>
+      <td>0.9069</td>
+      <td>0.89</td>
+      <td>0.891</td>
+      <td>0.90</td>
     </tr>
   </tbody>
 </table>
@@ -13666,7 +13872,7 @@ avg / total       0.78      0.86      0.82        43
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Since there is not much to tweak in the GaussianNaiveBayes Classifier it may not improve any further so I did not choose it. For SVM, I have already chose 'rbf' kernel, C=0.1 and degree=3, choosing a different kernel and C value did not make much difference so I did not choose it as well. For AdaBoost as well I tried with 'SAMME' algorithm and the far it could take my accuracy as 0.88. So I finally selected RandomForest Classifier as it works best with numerical features and there are multiple parameters I can tweak to improve the performance.</p>
+<p>Since there is not much to tweak in the GaussianNaiveBayes Classifier it may not improve any further so I did not choose it. For SVM, I have already chosen 'rbf' kernel, C=0.1 and degree=3, choosing a different kernel and C value did not make much difference so I did not choose it as well. For AdaBoost as well I tried with 'SAMME' algorithm and I could not get a higher accuracy than 0.90. So I finally selected KNearestNeighbors Classifier as it works best with numerical features and there are multiple parameters I can tweak to improve the performance.</p>
 
 </div>
 </div>
@@ -13679,9 +13885,9 @@ avg / total       0.78      0.86      0.82        43
 <h4 id="Hyperparameter-optimization\Tuning">Hyperparameter optimization\Tuning<a class="anchor-link" href="#Hyperparameter-optimization\Tuning">&#182;</a></h4><p>Parameter tuning for an algorithm means selecting the good and robust parameter or set of parameters for an algorithm to optimize its performance. Default parameters may not be customized very well for the particular dataset features and might result in poor performance. Scikit-learn provies two methods for algorithm tuning/Hyperparameter optimization: GridSearchCV and RandomizedSearchCV.</p>
 <p>I used GridSearchCV to do exhaustive search over different parameters and find the best parameters.</p>
 <ol>
-<li>I used the 'f1' as my scoring parameter to guide the parameter search process to minimize False Positives and False Neatives.</li>
+<li>I used the 'f1' as my scoring parameter to guide the parameter search process to minimize False Positives and False Neatives. Also because we can see above that accuracy is not a great parameter to evaulate here as many classifier seem to have almost similar accuracy values.</li>
 <li>In the 'cv' parameter, I passed a cross validation object (StatifiedShuffleSplit) to validate my search results that best adapt to my dataset characteristics.</li>
-<li>For my final RandomForestClassifier I tweaked the parameteres as shown below:</li>
+<li>For my final KNearestNeighbors Classifiers I tweaked the parameteres as shown below:</li>
 </ol>
 
 </div>
@@ -13689,22 +13895,22 @@ avg / total       0.78      0.86      0.82        43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Specifying parameters of the algorithm</span>
-<span class="n">clf_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;criterion&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;gini&#39;</span><span class="p">,</span> <span class="s1">&#39;entropy&#39;</span><span class="p">],</span>
-             <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
-             <span class="s1">&#39;min_samples_split&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-             <span class="s1">&#39;min_samples_leaf&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]}</span>
+<span class="n">clf_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;n_neighbors&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+             <span class="s1">&#39;weights&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;uniform&#39;</span><span class="p">,</span> <span class="s1">&#39;distance&#39;</span><span class="p">],</span>
+             <span class="s1">&#39;algorithm&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;ball_tree&#39;</span><span class="p">,</span> <span class="s1">&#39;kd_tree&#39;</span><span class="p">,</span> <span class="s1">&#39;brute&#39;</span><span class="p">,</span> <span class="s1">&#39;auto&#39;</span><span class="p">],</span>
+             <span class="s1">&#39;p&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]}</span>
 
 <span class="c1">#Specify algorithm</span>
-<span class="n">rf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">()</span>
 
 <span class="c1">#GridSearchCV</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">StratifiedShuffleSplit</span><span class="p">,</span> <span class="n">GridSearchCV</span>
-<span class="n">cv</span> <span class="o">=</span> <span class="n">StratifiedShuffleSplit</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">rf</span><span class="p">,</span> <span class="n">param_grid</span> <span class="o">=</span> <span class="n">clf_params</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="n">cv</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="s1">&#39;f1&#39;</span><span class="p">)</span>
+<span class="n">cv</span> <span class="o">=</span> <span class="n">StratifiedShuffleSplit</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">knn</span><span class="p">,</span> <span class="n">param_grid</span> <span class="o">=</span> <span class="n">clf_params</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="n">cv</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="s1">&#39;f1&#39;</span><span class="p">)</span>
 <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
 
 <span class="c1">#pick a winner</span>
@@ -13732,12 +13938,9 @@ F-score is ill-defined and being set to 0.0 due to no predicted samples.
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>RandomForestClassifier(bootstrap=True, class_weight=None, criterion=&#39;gini&#39;,
-            max_depth=None, max_features=&#39;auto&#39;, max_leaf_nodes=None,
-            min_impurity_split=1e-07, min_samples_leaf=1,
-            min_samples_split=3, min_weight_fraction_leaf=0.0,
-            n_estimators=10, n_jobs=1, oob_score=False, random_state=None,
-            verbose=0, warm_start=False)
+<pre>KNeighborsClassifier(algorithm=&#39;ball_tree&#39;, leaf_size=30, metric=&#39;minkowski&#39;,
+           metric_params=None, n_jobs=1, n_neighbors=3, p=1,
+           weights=&#39;uniform&#39;)
 </pre>
 </div>
 </div>
@@ -13751,20 +13954,28 @@ F-score is ill-defined and being set to 0.0 due to no predicted samples.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>After 50 re-shuffling and splitting iterations through StratifiedShuffleSplit and doing GridSearchCV on the RandomForestClassifier. I specified the winning criteria into the RandomForest but the result had only 2% increment in the accuracy.</p>
-<p>Looking at the features_list it does not make sense to include the 'total_stock_value' as some people have really high stock values, sp eventhough we got very high score for this in SKSelect I removed this from the features_list. I also changed some of the GridSearchCV criteria because the classifier did not improve much and the reason for this is I did only 100 iterations of StratifiedShuffleSplit.</p>
+<p>After 100 re-shuffling and splitting iterations through StratifiedShuffleSplit and doing GridSearchCV on the KNearestNeighbors Classifier I entered these criterias to check if there is any effect on performance.</p>
+<p>Analyzing the criterias for the classifier selected by GridSearchCV:</p>
+<ul>
+<li>n_neighbors = 3, is the number of neighbors it considers for KNN algorithm. The initial option was default = 3.</li>
+<li>Algorithm = 'BallTree', is used for fast generalized N-Point problems. The initial option was default 'auto'.</li>
+<li>leaf_size = 30, is optimal value for BallTree algorithm and decides the speed of query construction. The initial option was default 30.</li>
+<li>metric = 'minkowski', is the euclidean_distance calculating algorithm. The initial option was default 'minkowski'.</li>
+<li>p = 1, Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan_distance.</li>
+<li>Rest all other values are default.</li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Removing &#39;total_stock_value&#39; from the features list</span>
-<span class="n">features_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;poi&#39;</span><span class="p">,</span> <span class="s1">&#39;bonus&#39;</span><span class="p">,</span> <span class="s1">&#39;exercised_stock_options&#39;</span><span class="p">,</span> <span class="s1">&#39;total_payments&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;shared_receipt_with_poi&#39;</span><span class="p">,</span> <span class="s1">&#39;fraction_to_poi&#39;</span><span class="p">,</span> <span class="s1">&#39;fraction_from_poi&#39;</span><span class="p">]</span>
+<span class="n">features_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;poi&#39;</span><span class="p">,</span> <span class="s1">&#39;bonus&#39;</span><span class="p">,</span> <span class="s1">&#39;exercised_stock_options&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">,</span> <span class="s1">&#39;total_stock_value&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;total_payments&#39;</span><span class="p">,</span> <span class="s1">&#39;fraction_from_poi&#39;</span><span class="p">,</span> <span class="s1">&#39;fraction_to_poi&#39;</span><span class="p">]</span>
 
 <span class="c1">#Converting the features into vectors</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">featureFormat</span><span class="p">(</span><span class="n">my_dataset</span><span class="p">,</span> <span class="n">features_list</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -13775,28 +13986,25 @@ F-score is ill-defined and being set to 0.0 due to no predicted samples.
 <span class="c1">#Creating separate training and test sets</span>
 <span class="n">features_train</span><span class="p">,</span> <span class="n">features_test</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">,</span> <span class="n">labels_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
-<span class="c1">#Initializing the RandomForest Classifier on the tuned parameters</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
-<span class="n">rf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">bootstrap</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;gini&#39;</span><span class="p">,</span>
-            <span class="n">max_depth</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">max_leaf_nodes</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-            <span class="n">min_impurity_split</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
-            <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">min_weight_fraction_leaf</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
-            <span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">oob_score</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-            <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">warm_start</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="c1">#Initializing the KNN Classifier on the tuned parameters</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;ball_tree&#39;</span><span class="p">,</span> <span class="n">leaf_size</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;minkowski&#39;</span><span class="p">,</span>
+           <span class="n">metric_params</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+           <span class="n">weights</span><span class="o">=</span><span class="s1">&#39;uniform&#39;</span><span class="p">)</span>
 
 <span class="c1">#Training the classifier</span>
-<span class="n">rf</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features_train</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">)</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features_train</span><span class="p">,</span> <span class="n">labels_train</span><span class="p">)</span>
 
 <span class="c1">#Predicting the labels</span>
-<span class="n">rf_labels_predicted</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
+<span class="n">knn_labels_predicted</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
 
 <span class="c1">#Calculating the accuracy, precision, recall and f1 scores</span>
-<span class="n">rf_accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">rf_labels_predicted</span><span class="p">)</span>
-<span class="n">rf_classification_report</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">rf_labels_predicted</span><span class="p">)</span>
+<span class="n">knn_accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">knn_labels_predicted</span><span class="p">)</span>
+<span class="n">knn_classification_report</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">labels_test</span><span class="p">,</span> <span class="n">knn_labels_predicted</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;After Tuning:&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Random Forest accuracy score: {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rf_accuracy</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Random Forest classification report:</span><span class="se">\n</span><span class="s2">{}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rf_classification_report</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;K Nearest Neighbors accuracy score: {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">knn_accuracy</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;K Nearest Neighbors classification report:</span><span class="se">\n</span><span class="s2">{}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">knn_classification_report</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -13810,14 +14018,14 @@ F-score is ill-defined and being set to 0.0 due to no predicted samples.
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>After Tuning:
-Random Forest accuracy score: 0.93023255814.
-Random Forest classification report:
+K Nearest Neighbors accuracy score: 0.906976744186.
+K Nearest Neighbors classification report:
              precision    recall  f1-score   support
 
-        0.0       0.93      1.00      0.96        40
-        1.0       0.00      0.00      0.00         3
+        0.0       0.90      1.00      0.95        38
+        1.0       1.00      0.20      0.33         5
 
-avg / total       0.87      0.93      0.90        43
+avg / total       0.92      0.91      0.88        43
 .
 </pre>
 </div>
@@ -13833,7 +14041,97 @@ avg / total       0.87      0.93      0.90        43
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Validate-and-Evaluate">Validate and Evaluate<a class="anchor-link" href="#Validate-and-Evaluate">&#182;</a></h3><p>Validation is the strategy to evaluate the performance of the model on unseen data. In my case, I used a variation of cross-validation called StratifiedShuffleSplit which makes randomly chosen training and test sets multiple times and averages results of overall tests. Data is first shuffled and then split into pair of training and test sets. Stratification ensures training and test splits have class distribution (POI:NON-POI) that represents the overall data. Stratification is well suited in our case because of the class imbalance (18 POI vs 128 Non-POI).</p>
-<p>Along with Accuracy I used Precision, Recall and F1-Score for model evaluation. The Accuracy of my RandomForest Classifier after tuning was 93.02%. For imbalaced classes like we have, Precision and Recall are common easures. A good precision means the number of values that are correctly are marked as True Positive out of True Positive and False Positive. Low precision indicates a large number of False Positives. A good recall means number of values marked correctly as it shows up in the test cases. A low recall indicates many False Negaives. The Precision of my RandomForest Classifier was 87% and Recall was 93%. F1-score conveys a balance between precision and recall, it is also the harmonic mean of precision and recall, my F1-score is 90%.</p>
+<p>Along with Accuracy I used Precision, Recall and F1-Score for model evaluation. The Accuracy of my KNearestNeighbors Classifier after tuning was 90.69%. For imbalaced classes like we have, Precision and Recall are common easures.</p>
+<ul>
+<li>A good precision means the number of values that are correctly are marked as True Positive out of True Positive and False Positive. Low precision indicates a large number of False Positives.</li>
+<li>A good recall means number of values marked correctly as it shows up in the test cases. A low recall indicates many False Negaives. The Precision of my KNearestNeighbors Classifier is 92% and Recall is 91%.</li>
+<li>F1-score conveys a balance between precision and recall, it is also the harmonic mean of precision and recall, my F1-score is 88%.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_colwidth</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">knn_data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;KNearestNeighbors Classifier&#39;</span><span class="p">:[</span><span class="s1">&#39;Before Hyperparameter Optimization&#39;</span><span class="p">,</span>
+                                        <span class="s1">&#39;After Hyperparameter Optimization&#39;</span><span class="p">],</span>
+       <span class="s1">&#39;Parameters&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;priors=[0.3, 07], algorithm=&#39;ball_tree&#39;, n_neighbors=5, p=2&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;priors=None, algorithm=&#39;ball_tree&#39;, n_neighbors=3, p=1&quot;</span><span class="p">],</span>
+       <span class="s1">&#39;Accuracy&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.9069</span><span class="p">,</span> <span class="mf">0.9069</span><span class="p">],</span>
+       <span class="s1">&#39;Precision&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.89</span><span class="p">,</span> <span class="mf">0.92</span><span class="p">],</span>
+        <span class="s1">&#39;Recall&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.891</span><span class="p">,</span> <span class="mf">0.91</span><span class="p">],</span>
+        <span class="s1">&#39;F1&#39;</span><span class="p">:[</span><span class="mf">0.90</span><span class="p">,</span> <span class="mf">0.88</span><span class="p">]</span>
+       <span class="p">}</span>
+
+<span class="n">knn_comparison</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">knn_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;KNearestNeighbors Classifier&#39;</span><span class="p">,</span> <span class="s1">&#39;Parameters&#39;</span><span class="p">,</span> <span class="s1">&#39;Accuracy&#39;</span><span class="p">,</span> <span class="s1">&#39;Precision&#39;</span><span class="p">,</span> <span class="s1">&#39;Recall&#39;</span><span class="p">,</span> <span class="s1">&#39;F1&#39;</span><span class="p">])</span>
+<span class="n">knn_comparison</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[24]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>KNearestNeighbors Classifier</th>
+      <th>Parameters</th>
+      <th>Accuracy</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Before Hyperparameter Optimization</td>
+      <td>priors=[0.3, 07], algorithm='ball_tree', n_neighbors=5, p=2</td>
+      <td>0.9069</td>
+      <td>0.89</td>
+      <td>0.891</td>
+      <td>0.90</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>After Hyperparameter Optimization</td>
+      <td>priors=None, algorithm='ball_tree', n_neighbors=3, p=1</td>
+      <td>0.9069</td>
+      <td>0.92</td>
+      <td>0.910</td>
+      <td>0.88</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The accuracy of our KNN classifier has not changed at all, but we can see that the Precision and Recall values have increased by 2%. This means there are less False Positives and False Negatives than before and GridSearchCV was useful in tuning the performance of our classfier.</p>
 
 </div>
 </div>
@@ -13858,23 +14156,41 @@ avg / total       0.87      0.93      0.90        43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">### You do not need to change anything below, but make sure</span>
 <span class="c1">### that the version of poi_id.py that you submit can be run on its own and</span>
 <span class="c1">### generates the necessary .pkl files for validating your results.</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
-<span class="n">rf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;entropy&#39;</span><span class="p">,</span>
-                            <span class="n">max_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-                            <span class="n">n_estimators</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
-                            <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-                            <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;ball_tree&#39;</span><span class="p">,</span> <span class="n">leaf_size</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;minkowski&#39;</span><span class="p">,</span>
+           <span class="n">metric_params</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+           <span class="n">weights</span><span class="o">=</span><span class="s1">&#39;uniform&#39;</span><span class="p">)</span>
 
-<span class="n">dump_classifier_and_data</span><span class="p">(</span><span class="n">clf</span><span class="o">=</span><span class="n">rf</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="n">my_dataset</span><span class="p">,</span> <span class="n">feature_list</span><span class="o">=</span><span class="n">features_list</span><span class="p">)</span>
+<span class="n">dump_classifier_and_data</span><span class="p">(</span><span class="n">clf</span><span class="o">=</span><span class="n">knn</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="n">my_dataset</span><span class="p">,</span> <span class="n">feature_list</span><span class="o">=</span><span class="n">features_list</span><span class="p">)</span>
+</pre></div>
 
-<span class="kn">from</span> <span class="nn">tester</span> <span class="kn">import</span> <span class="n">test_classifier</span>
-<span class="n">test_classifier</span><span class="p">(</span><span class="n">clf</span><span class="o">=</span><span class="n">rf</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="n">my_dataset</span><span class="p">,</span> <span class="n">feature_list</span><span class="o">=</span><span class="n">features_list</span><span class="p">)</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Testing-on-tester.py">Testing on tester.py<a class="anchor-link" href="#Testing-on-tester.py">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">tester</span> <span class="kn">import</span> <span class="n">test_classifier</span>
+<span class="n">test_classifier</span><span class="p">(</span><span class="n">clf</span><span class="o">=</span><span class="n">knn</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="n">my_dataset</span><span class="p">,</span> <span class="n">feature_list</span><span class="o">=</span><span class="n">features_list</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13887,14 +14203,11 @@ avg / total       0.87      0.93      0.90        43
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>RandomForestClassifier(bootstrap=True, class_weight=None, criterion=&#39;entropy&#39;,
-            max_depth=2, max_features=&#39;auto&#39;, max_leaf_nodes=None,
-            min_impurity_split=1e-07, min_samples_leaf=10,
-            min_samples_split=50, min_weight_fraction_leaf=0.0,
-            n_estimators=5, n_jobs=1, oob_score=False, random_state=None,
-            verbose=0, warm_start=False)
-	Accuracy: 0.86620	Precision: 0.11111	Recall: 0.00050	F1: 0.00100	F2: 0.00062
-	Total predictions: 15000	True positives:    1	False positives:    8	False negatives: 1999	True negatives: 12992
+<pre>KNeighborsClassifier(algorithm=&#39;ball_tree&#39;, leaf_size=30, metric=&#39;minkowski&#39;,
+           metric_params=None, n_jobs=1, n_neighbors=3, p=1,
+           weights=&#39;uniform&#39;)
+	Accuracy: 0.88227	Precision: 0.60227	Recall: 0.34450	F1: 0.43830	F2: 0.37675
+	Total predictions: 15000	True positives:  689	False positives:  455	False negatives: 1311	True negatives: 12545
 
 </pre>
 </div>
@@ -13909,11 +14222,11 @@ avg / total       0.87      0.93      0.90        43
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="References">References<a class="anchor-link" href="#References">&#182;</a></h4><ol>
-<li>&lt;a href = <a href="https://www.udacity.com/course/intro-to-machine-learning--ud120&gt;Udacity">https://www.udacity.com/course/intro-to-machine-learning--ud120&gt;Udacity</a> Machine Learning&lt;/a&gt;</li>
-<li>&lt;a href = <a href="https://en.wikipedia.org/wiki/Enron&gt;Enron">https://en.wikipedia.org/wiki/Enron&gt;Enron</a> Wiki&lt;/a&gt;</li>
-<li>&lt;a href = <a href="http://scikit-learn.org/stable&gt;Scikit-Learn">http://scikit-learn.org/stable&gt;Scikit-Learn</a>&lt;/a&gt;</li>
-<li>&lt;a href = <a href="http://bokeh.pydata.org/en/latest/docs/user_guide/annotations.html#legends&gt;Bokeh">http://bokeh.pydata.org/en/latest/docs/user_guide/annotations.html#legends&gt;Bokeh</a> JS&lt;/a&gt;</li>
+<h3 id="References">References<a class="anchor-link" href="#References">&#182;</a></h3><ol>
+<li>&lt;a href = '<a href="https://www.udacity.com/course/intro-to-machine-learning--ud120'&gt;">https://www.udacity.com/course/intro-to-machine-learning--ud120'&gt;</a> Udacity Machine Learning &lt;/a&gt;</li>
+<li>&lt;a href = '<a href="https://en.wikipedia.org/wiki/Enron'&gt;">https://en.wikipedia.org/wiki/Enron'&gt;</a> Enron Wiki &lt;/a&gt;</li>
+<li>&lt;a href = '<a href="http://scikit-learn.org/stable'&gt;">http://scikit-learn.org/stable'&gt;</a> Scikit-Learn &lt;/a&gt;</li>
+<li>&lt;a href = '<a href="http://bokeh.pydata.org/en/latest/docs/user_guide/annotations.html#legends'&gt;">http://bokeh.pydata.org/en/latest/docs/user_guide/annotations.html#legends'&gt;</a> Bokeh JS &lt;/a&gt;</li>
 </ol>
 
 </div>

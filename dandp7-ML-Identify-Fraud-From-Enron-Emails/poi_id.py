@@ -12,12 +12,15 @@ from tester import dump_classifier_and_data
 ### Task 1: Select what features you'll use.
 ### features_list is a list of strings, each of which is a feature name.
 ### The first feature must be "poi".
-features_list = ['poi', 'salary', 'exercised_stock_options', 'expenses', 'total_payments', 'total_stock_value']
+features_list = ['poi', 'salary', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'bonus', 'restricted_stock', 'other',
+ 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages',
+ 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'from_poi_to_this_person']
 
 ### Load the dictionary containing the dataset
 with open("final_project_dataset.pkl", "r") as data_file:
     data_dict = pickle.load(data_file)
-
+	
+	
 ### Task 2: Remove outliers
 #Importing pandas and numpy
 import pandas as pd
@@ -106,8 +109,9 @@ my_dataset = enron_data.to_dict('index')
 
 from sklearn.feature_selection import SelectKBest, f_classif
 
-features_list = ['poi', 'bonus', 'exercised_stock_options', 'expenses', 'other', 'restricted_stock', 'salary',
-                'shared_receipt_with_poi', 'total_payments', 'total_stock_value', 'fraction_to_poi', 'fraction_from_poi']
+features_list = ['poi', 'salary', 'total_payments', 'exercised_stock_options', 'bonus', 'restricted_stock', 'other',
+ 'shared_receipt_with_poi', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages',
+ 'from_this_person_to_poi', 'long_term_incentive', 'from_poi_to_this_person']
 
 data = featureFormat(my_dataset, features_list, sort_keys=True)
 labels, features = targetFeatureSplit(data)
@@ -117,7 +121,7 @@ selector = SelectKBest(f_classif, k=5)
 selector.fit(features, labels)
 
 #Get the raw p-values for each feature, and transform from p-values into scores
-scores = -np.log10(selector.pvalues_)
+scores = selector.scores_
 
 #Bokeh Barplots
 from bokeh.charts import Bar, show
@@ -125,14 +129,16 @@ from bokeh.charts import Bar, show
 data = {'scores': scores, 'features': features_list[1:]}
 
 bar = Bar(data, label='features', values='scores', title='Select K Best',
-         legend = None, plot_width=450, plot_height=450)
+         legend = None, plot_width=850, plot_height=450)
 
 show(bar)
 
 ### Task 4: Try a varity of classifiers
 ### Extract features and labels from dataset for local testing
+### Extract features and labels from dataset for local testing
 features_list = ['poi', 'bonus', 'exercised_stock_options', 'salary', 'total_stock_value',
-                 'shared_receipt_with_poi', 'total_payments', 'fraction_to_poi', 'fraction_from_poi']
+                 'total_payments', 'long_term_incentive', 'fraction_from_poi', 'fraction_to_poi']
+
 data = featureFormat(my_dataset, features_list, sort_keys=True)
 labels, features = targetFeatureSplit(data)
 
@@ -141,42 +147,43 @@ from sklearn.cross_validation import train_test_split
 features_train, features_test, labels_train, labels_test = train_test_split(features, labels, test_size=0.3, random_state=42)
 from sklearn.metrics import accuracy_score, classification_report
 
-#Random Forest
-from sklearn.ensemble import RandomForestClassifier
-rf = RandomForestClassifier(criterion='entropy', min_samples_leaf=1, min_samples_split=2)
-rf = rf.fit(features_train, labels_train)
-rf_labels_predicted = rf.predict(features_test)
+#KNearestNeighbors Classifier
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(n_neighbors=3)
+knn = knn.fit(features_train, labels_train)
+knn_labels_predicted = knn.predict(features_test)
 
-rf_accuracy = accuracy_score(labels_test, rf_labels_predicted)
-rf_classification_report = classification_report(labels_test, rf_labels_predicted)
+knn_accuracy = accuracy_score(labels_test, knn_labels_predicted)
+knn_classification_report = classification_report(labels_test, knn_labels_predicted)
 
-print("Random Forest accuracy score: {}.".format(rf_accuracy))
-print("Random Forest classification report:\n{}.".format(rf_classification_report))
+print("KNearestNeighbors accuracy score: {}.".format(knn_accuracy))
+print("KNearestNeighbors classification report:\n{}.".format(knn_classification_report))
 
+# Comparing performance
 pd.options.display.max_colwidth = 0
 
 data = {'Algorithms':['GaussianNaiveBayes Classifier',
                       'SupportVectorMachines Classifier',
                       'AdaBoost Classifier',
-                      'RandomForst Classifier'],
-       'Parameters': ["Default",
+                      'KNearestNeighbors Classifier'],
+       'Parameters': ["priors=[0.3, 07]",
                      "kernel='rbf', C=0.1, degree=3",
-                      "learning_rate=0.1, algorithm='SAMME.R",
-                      "criterion='entropy', min_samples_leaf=1, min_samples_split=2"
+                      "learning_rate=0.9, n_estimators=100, random_state=42",
+                      "n_neighbors=3"
                      ],
-       'Accuracy': [0.8604, 0.8837, 0.8139, 0.8604],
-       'Precision': [0.86, 0.78, 0.77, 0.78],
-        'Recall': [0.86, 0.88, 0.81, 0.86],
-        'F1':[0.86, 0.83, 0.79, 0.82]
+       'Accuracy': [0.8837, 0.8837, 0.9069, 0.9069],
+       'Precision': [0.92, 0.78, 0.83, 0.89],
+        'Recall': [0.88, 0.88, 0.86, 0.891],
+        'F1':[0.89, 0.83, 0.84, 0.90]
        }
 
 algorithms = pd.DataFrame(data, columns=['Algorithms', 'Parameters', 'Accuracy', 'Precision', 'Recall', 'F1'])
-print(algorithms)
+algorithms
 
 ### Task 5: Tune your classifier to achieve better than .3 precision and recall 
 #Removing 'total_stock_value' from the features list
-features_list = ['poi', 'bonus', 'exercised_stock_options', 'total_payments', 'salary',
-                 'shared_receipt_with_poi', 'fraction_to_poi', 'fraction_from_poi']
+features_list = ['poi', 'bonus', 'exercised_stock_options', 'salary', 'total_stock_value',
+                 'total_payments', 'fraction_from_poi', 'fraction_to_poi']
 
 #Converting the features into vectors
 data = featureFormat(my_dataset, features_list, sort_keys=True)
@@ -187,39 +194,36 @@ labels, features = targetFeatureSplit(data)
 #Creating separate training and test sets
 features_train, features_test, labels_train, labels_test = train_test_split(features, labels, test_size=0.3, random_state=42)
 
-#Initializing the RandomForest Classifier on the tuned parameters
-from sklearn.ensemble import RandomForestClassifier
-rf = RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
-            max_depth=None, max_features='auto', max_leaf_nodes=None,
-            min_impurity_split=1, min_samples_leaf=5,
-            min_samples_split=10, min_weight_fraction_leaf=0.0,
-            n_estimators=10, n_jobs=1, oob_score=False, random_state=None,
-            verbose=0, warm_start=False)
+#Initializing the KNN Classifier on the tuned parameters
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(algorithm='ball_tree', leaf_size=30, metric='minkowski',
+           metric_params=None, n_jobs=1, n_neighbors=3, p=1,
+           weights='uniform')
 
 #Training the classifier
-rf = rf.fit(features_train, labels_train)
+knn = knn.fit(features_train, labels_train)
 
 #Predicting the labels
-rf_labels_predicted = rf.predict(features_test)
+knn_labels_predicted = knn.predict(features_test)
 
 #Calculating the accuracy, precision, recall and f1 scores
-rf_accuracy = accuracy_score(labels_test, rf_labels_predicted)
-rf_classification_report = classification_report(labels_test, rf_labels_predicted)
+knn_accuracy = accuracy_score(labels_test, knn_labels_predicted)
+knn_classification_report = classification_report(labels_test, knn_labels_predicted)
 
 print("After Tuning:")
-print("Random Forest accuracy score: {}.".format(rf_accuracy))
-print("Random Forest classification report:\n{}.".format(rf_classification_report))
-
+print("K Nearest Neighbors accuracy score: {}.".format(knn_accuracy))
+print("K Nearest Neighbors classification report:\n{}.".format(knn_classification_report))
 
 ### Task 6: Dump your classifier, dataset, and features_list
-from sklearn.ensemble import RandomForestClassifier
-rf = RandomForestClassifier(criterion='entropy',
-                            max_depth=2,
-                            n_estimators=5,
-                            min_samples_leaf=10,
-                            min_samples_split=50)
+### You do not need to change anything below, but make sure
+### that the version of poi_id.py that you submit can be run on its own and
+### generates the necessary .pkl files for validating your results.
 
-dump_classifier_and_data(clf=rf, dataset=my_dataset, feature_list=features_list)
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(algorithm='ball_tree', leaf_size=30, metric='minkowski',
+           metric_params=None, n_jobs=1, n_neighbors=3, p=1,
+           weights='uniform')
 
+dump_classifier_and_data(clf=knn, dataset=my_dataset, feature_list=features_list)
 from tester import test_classifier
-test_classifier(clf=rf, dataset=my_dataset, feature_list=features_list)
+test_classifier(clf=knn, dataset=my_dataset, feature_list=features_list)
