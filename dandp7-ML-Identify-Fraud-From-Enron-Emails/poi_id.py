@@ -135,9 +135,8 @@ show(bar)
 
 ### Task 4: Try a varity of classifiers
 ### Extract features and labels from dataset for local testing
-### Extract features and labels from dataset for local testing
 features_list = ['poi', 'bonus', 'exercised_stock_options', 'salary', 'total_stock_value',
-                 'total_payments', 'long_term_incentive', 'fraction_from_poi', 'fraction_to_poi']
+                 'total_payments', 'fraction_from_poi', 'fraction_to_poi']
 
 data = featureFormat(my_dataset, features_list, sort_keys=True)
 labels, features = targetFeatureSplit(data)
@@ -167,29 +166,24 @@ data = {'Algorithms':['GaussianNaiveBayes Classifier',
                       'AdaBoost Classifier',
                       'KNearestNeighbors Classifier'],
        'Parameters': ["priors=[0.3, 07]",
-                     "kernel='rbf', C=0.1, degree=3",
-                      "learning_rate=0.9, n_estimators=100, random_state=42",
-                      "n_neighbors=3"
+                     "kernel='poly', C=0.01, degree=3",
+                      "learning_rate=0.09, algorithm='SAMME', n_estimators=100, random_state=42",
+                      "n_neighbors=5"
                      ],
-       'Accuracy': [0.8837, 0.8837, 0.9069, 0.9069],
-       'Precision': [0.92, 0.78, 0.83, 0.89],
-        'Recall': [0.88, 0.88, 0.86, 0.891],
-        'F1':[0.89, 0.83, 0.84, 0.90]
+       'Accuracy': [0.8837, 0.1162, 0.8837, 0.8837],
+       'Precision': [0.92, 0.01, 0.78, 0.86],
+        'Recall': [0.88, 0.12, 0.88, 0.88],
+        'F1':[0.89, 0.02, 0.83, 0.86]
        }
 
 algorithms = pd.DataFrame(data, columns=['Algorithms', 'Parameters', 'Accuracy', 'Precision', 'Recall', 'F1'])
-algorithms
+print(algorithms)
 
 ### Task 5: Tune your classifier to achieve better than .3 precision and recall 
 #Removing 'total_stock_value' from the features list
-features_list = ['poi', 'bonus', 'exercised_stock_options', 'salary', 'total_stock_value',
-                 'total_payments', 'fraction_from_poi', 'fraction_to_poi']
-
-#Converting the features into vectors
-data = featureFormat(my_dataset, features_list, sort_keys=True)
-
-#Splitting the features and labels
-labels, features = targetFeatureSplit(data)
+from sklearn.pipeline import Pipeline
+from sklearn.decomposition import PCA
+from tempfile import mkdtemp
 
 #Creating separate training and test sets
 features_train, features_test, labels_train, labels_test = train_test_split(features, labels, test_size=0.3, random_state=42)
@@ -200,20 +194,25 @@ knn = KNeighborsClassifier(algorithm='ball_tree', leaf_size=30, metric='minkowsk
            metric_params=None, n_jobs=1, n_neighbors=3, p=1,
            weights='uniform')
 
+estimators = [('reduce_dim', PCA()), ('clf', knn)]
+
+cachedir = mkdtemp()
+pipe = Pipeline(estimators)
+print(str(pipe)+'\n')
+
 #Training the classifier
-knn = knn.fit(features_train, labels_train)
+pipe = pipe.fit(features_train, labels_train)
 
 #Predicting the labels
-knn_labels_predicted = knn.predict(features_test)
+knn_labels_predicted = pipe.predict(features_test)
 
 #Calculating the accuracy, precision, recall and f1 scores
 knn_accuracy = accuracy_score(labels_test, knn_labels_predicted)
 knn_classification_report = classification_report(labels_test, knn_labels_predicted)
 
-print("After Tuning:")
-print("K Nearest Neighbors accuracy score: {}.".format(knn_accuracy))
-print("K Nearest Neighbors classification report:\n{}.".format(knn_classification_report))
-
+print("After Tuning and Feature Scaling:")
+print("KNearestNeighbors accuracy score: {}.".format(knn_accuracy))
+print("KNearestNeighbors classification report:\n{}.".format(knn_classification_report))
 ### Task 6: Dump your classifier, dataset, and features_list
 ### You do not need to change anything below, but make sure
 ### that the version of poi_id.py that you submit can be run on its own and
