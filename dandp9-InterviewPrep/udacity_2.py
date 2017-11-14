@@ -40,9 +40,9 @@ def question2(a):
         longest_palindrome = palindrome
     return longest_palindrome
 
+def main():
+    global a
 
-
-if __name__ == '__main__':
     a = 'That Was it a car or a cat I saw?'
     print(question2(a))
 
@@ -51,3 +51,7 @@ if __name__ == '__main__':
 
     a = 'ABCBACADCBBCDA'
     print(question2(a))
+
+
+if __name__ == '__main__':
+    main()
