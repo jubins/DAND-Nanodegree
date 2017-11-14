@@ -84,7 +84,7 @@ def main():
     s1 = {'A': [('B', 2)],
           'B': [('A', 4), ('C', 2)],
           'C': [('A', 2), ('B', 5)]}
-
+    # Testcase1
     print(question3(s1))
 
 

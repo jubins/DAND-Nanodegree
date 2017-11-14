@@ -6,7 +6,7 @@ definition should look like: question1(s, t) and return a boolean True or False.
 """
 
 def permutations(t, l, r, permuted):
-    '''helper function for question1'''
+    '''helper function to calculate permutations'''
     if l==r:
         permuted.append(''.join(t))
     else:
@@ -30,21 +30,25 @@ def question1(s, t):
     return False
 
 def main():
+    #Testcase1 - Expected True because Anagram exists
     s = "udacity"
     t = "ad"
     print(question1(s, t))
-
+    # Testcase2 - Expected True because Anagram exists
     s = "udacity"
     t = "acid"
     print(question1(s, t))
-
+    # Testcase3 - Expected False because Anagram does not exists
     s = "udacity"
     t = "udacious"
     print(question1(s, t))
-
+    # Testcase4 (Edge) - Expected False because substring is longer than string
     s = "city"
     t = "udacity"
     print(question1(s, t))
-
+    # Testcase5 (Edge) - Expected False because string is empty
+    s = ""
+    t = "udacity"
+    print(question1(s, t))
 if __name__ == '__main__':
     main()
