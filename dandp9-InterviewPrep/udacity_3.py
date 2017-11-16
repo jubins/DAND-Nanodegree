@@ -81,12 +81,25 @@ def question3(s1):
 
 
 def main():
+    # Testcase1
     s1 = {'A': [('B', 2)],
           'B': [('A', 4), ('C', 2)],
           'C': [('A', 2), ('B', 5)]}
-    # Testcase1
     print(question3(s1))
 
+    # Testcase2
+    s1 = {'A': [('B', 2), ('B', 4)],
+          'B': [('A', 4), ('C', 2), ('C', 5)],
+          'C': [('A', 2), ('B', 5)]}
+    print(question3(s1))
 
+    # Testcase3
+    s1 = {'C': [('A', 7)],
+          'A': [('C', 4)]}
+    print(question3(s1))
+
+    # Testcase4
+    s1 = {}
+    print(question3(s1))
 if __name__ == '__main__':
     main()
