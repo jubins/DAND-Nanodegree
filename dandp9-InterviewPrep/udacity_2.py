@@ -4,54 +4,50 @@ Given a string a, find the longest palindromic substring contained in a.
 Your function definition should look like question2(a), and return a string.
 """
 
-def reverse(s, r):
-    '''helper function for question2 to reverse a string'''
-    if len(s)==0:
-        return ''
-    r.append(s[-1])
-    return reverse(s[:-1], r)
-
-def palindromize(string):
-    '''helper function for question2 to find palindrome'''
-    s = string
-    string = ''.join(x for x in list(s.lower()) if x.isalpha())
-    for i in range(len(string)-1):
-        reversed_string = []
-        reverse(string[i:], reversed_string)
-        reversed_string = ''.join(reversed_string)
-        #print(string[i:], reversed_string)
-        if (string[i:] == reversed_string):
-            palindrome =  s[i:].strip(' \n\t')
-            return palindrome
+def longest_palindrome(a, left_idx, right_idx):
+    # find the longest palindrome if centered at idx.
+    # idx can be in between elements.
+    # left_idx and right_idx are the left and the right element of idx
+    l = left_idx
+    r = right_idx
+    while l >= 0 and r < len(a):
+        if a[l] == a[r]:
+            l -= 1
+            r += 1
         else:
-            continue
-    return ''
+            return l, r
+    return l, r
+
 
 def question2(a):
-    if len(a) <= 1:
+    # make sure a is a string
+    if type(a) != str:
+        return "Error: a not string!"
+
+    # make sure a has at least 2 characters
+    if len(a) < 2:
         return a
-    longest_palindrome = ''
-    string = a#''.join(x for x in list(a.lower()) if x.isalpha())
-    #checking palindrome from left to right
-    palindrome = palindromize(string)
-    if len(longest_palindrome) < len(palindrome):
-        longest_palindrome = palindrome
 
-    # checking palindrome from right to left
-    reversed_string = []
-    reverse(string, reversed_string)
-    reversed_string = ''.join(reversed_string)
-    palindrome = palindromize(reversed_string)
-    if len(longest_palindrome) < len(palindrome):
-        longest_palindrome = palindrome
+    # check all possible center of palindrome
+    pal_left = 0
+    pal_right = 1
+    for i in range(len(a) - 1):
+        # check palindrome centered at i
+        l, r = longest_palindrome(a, i, i)
+        if r - l - 1 > pal_right - pal_left:
+            pal_right = r
+            pal_left = l + 1
 
-    # checking palindrome in middle
-
-    return longest_palindrome
+        # check palindrome centered between i and i+1
+        l, r = longest_palindrome(a, i, i + 1)
+        if r - l - 1 > pal_right - pal_left:
+            pal_right = r
+            pal_left = l + 1
+    return a[pal_left:pal_right]
 
 def main():
-    #Testcase1 - Expected: Was it a car or a cat I saw?
-    a = 'That Was it a car or a cat I saw?'
+    #Testcase1 - Expected: aba
+    a = 'abacdfgdcaba'
     print(question2(a))
     # Testcase2 - Expected: RACECAR
     a = 'RACECAR'
@@ -59,10 +55,10 @@ def main():
     # Testcase3 - Expected: ADCBBCDA
     a = 'ABCBACADCBBCDA'
     print(question2(a))
-    # Testcase4 - Expected: null as no palindrome
-    a = 'iPhone'
+    # Testcase4 (Edge) - Expected: null as no palindrome
+    a = 'babcbabcbaccba'
     print(question2(a))
-    # Testcase5 - Expected: A as single character
+    # Testcase5 (Edge) - Expected: A as single character
     a = 'A'
     print(question2(a))
 
