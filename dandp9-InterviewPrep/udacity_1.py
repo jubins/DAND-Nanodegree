@@ -5,29 +5,32 @@ For example: if s = "udacity" and t = "ad", then the function returns True. Your
 definition should look like: question1(s, t) and return a boolean True or False.
 """
 
-def permutations(t, l, r, permuted):
-    '''helper function to calculate permutations'''
-    if l==r:
-        permuted.append(''.join(t))
-    else:
-        for i in range(l, r+1):
-            t[l], t[i] = t[i], t[l]
-            permutations(t, l+1, r, permuted)
-            t[l], t[i] = t[i], t[l]
+def char_count(a):
+    '''helper function to calculate store elements count in dict'''
+    char_count_dict = {}
+    for i in a:
+        if i not in char_count_dict:
+            char_count_dict[i] = 1
+        else:
+            char_count_dict[i] += 1
 
-#First I create permutations of string t, store all them in a list
-# then I check if any of the permutations exists in the string s
+    return char_count_dict
+
 def question1(s, t):
-    if s == t:
+    char_count_s = char_count(s)
+    char_count_t = char_count(t)
+    count = 0
+    for k, v in char_count_t.items():
+        if k not in char_count_s:
+            continue
+        elif v == char_count_s[k]:
+            count += 1
+        else:
+            continue
+    if count == len(char_count_t):
         return True
-    if len(s) == 0 or len(t) == 0:
+    else:
         return False
-    permuted = []
-    permutations(list(t), 0, len(t)-1, permuted)
-    for i in permuted:
-        if i in s:
-            return True
-    return False
 
 def main():
     #Testcase1 - Expected True because Anagram exists
