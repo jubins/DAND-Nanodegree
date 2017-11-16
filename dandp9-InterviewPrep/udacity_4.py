@@ -29,6 +29,8 @@ def parent(T, n):
     return -1
 
 def question4(T, r, n1, n2):
+    if len(T) ==0:
+        return
     n1_ps = []
 
     while n1 != r:
@@ -46,7 +48,7 @@ def question4(T, r, n1, n2):
     return -1
 
 def main():
-    # Testcase1
+    # Testcase1, Expected: 3
     print(question4([[0, 1, 0, 0, 0],
                      [0, 0, 0, 0, 0],
                      [0, 0, 0, 0, 0],
@@ -55,7 +57,8 @@ def main():
                       3,
                       1,
                       4))
-# Testcase2
+
+# Testcase2, Expected -1 as no LCA fromed
     print(question4([[0, 1, 0, 0, 0],
                      [0, 0, 0, 0, 0],
                      [0, 0, 0, 0, 0],
@@ -64,6 +67,22 @@ def main():
                       1,
                       1,
                       4))
+
+# Testcase3 (Edge), Expected: None
+    print(question4([],
+                      1,
+                      0,
+                      0))
+
+# Testcase4, Expected 2
+    print(question4([[0, 1, 0, 0, 0],
+                     [0, 0, 0, 0, 0],
+                     [1, 1, 1, 1, 0],
+                     [1, 0, 0, 0, 1],
+                     [1, 0, 0, 1, 0]],
+                      2,
+                      1,
+                      3))
 
 if __name__ == '__main__':
     main()
