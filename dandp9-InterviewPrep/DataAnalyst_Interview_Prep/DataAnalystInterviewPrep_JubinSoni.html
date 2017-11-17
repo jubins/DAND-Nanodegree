@@ -11826,8 +11826,7 @@ OR
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Question-3:-Given-the-table-users:-Construct-a-query-to-find-the-top-5-states-with-the-highest-number-of-active-users.-Include-the-number-for-each-state-in-the-example-result.">Question 3: Given the table <code>users</code>: Construct a query to find the top 5 states with the highest number of active users. Include the number for each state in the example result.<a class="anchor-link" href="#Question-3:-Given-the-table-users:-Construct-a-query-to-find-the-top-5-states-with-the-highest-number-of-active-users.-Include-the-number-for-each-state-in-the-example-result.">&#182;</a></h4><p>Table <code>users</code></p>
 
-<pre><code>table
-| Column      | Type      |
+<pre><code>| Column      | Type      |
 |-------------|-----------|
 | id          | integer   |
 | username    | character |
@@ -11837,47 +11836,22 @@ OR
 | zip         | integer   |
 | active      | boolean   |</code></pre>
 
-<pre><code>```</code></pre>
-<p>Example result:</p>
-<table>
-<thead><tr>
-<th>state</th>
-<th>num_active_users</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>New Mexico</td>
-<td>502</td>
-</tr>
-<tr>
-<td>Alabama</td>
-<td>495</td>
-</tr>
-<tr>
-<td>California</td>
-<td>300</td>
-</tr>
-<tr>
-<td>Maine</td>
-<td>201</td>
-</tr>
-<tr>
-<td>Texas</td>
-<td>189</td>
-</tr>
-</tbody>
-</table>
+<pre><code>Example result:
 
-<pre><code>
-
-```sql
-SELECT state, count(id) as num_active_users
-FROM users
-WHERE active=True
-GROUP BY state
-ORDER BY num_active_users DESC
-LIMIT 5;</code></pre>
+| state      | num_active_users |
+|------------|------------------|
+| New Mexico | 502              |
+| Alabama    | 495              |
+| California | 300              |
+| Maine      | 201              |
+| Texas      | 189              |</code></pre>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">state</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="k">as</span> <span class="n">num_active_users</span>
+<span class="k">FROM</span> <span class="n">users</span>
+<span class="k">WHERE</span> <span class="n">active</span><span class="o">=</span><span class="k">True</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="k">state</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">num_active_users</span> <span class="k">DESC</span>
+<span class="k">LIMIT</span> <span class="mi">5</span><span class="p">;</span>
+</pre></div>
 
 </div>
 </div>
