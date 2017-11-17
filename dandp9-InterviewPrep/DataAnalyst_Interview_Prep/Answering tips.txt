@@ -1,0 +1,15 @@
+QUESTION 1 : Describe a project you worked upon recently?
+Write a summary of what the project was
+Write importance of the project (i.e what problem is it trying to solve)
+Write all the tech you used (i.e Python, numpy, Pandas etc)
+Write how gig the team was i.e just you?
+Write the approach yu used to solve the project.
+Was it innovative? New? Describe it.
+Write the challenges you faced
+Write a benchmark you chose to determine if your project is successful or not
+Finally write the conclusion of the project.
+Was it better as good or worse than what you had predcited when you started out
+and Any future work for someone that wants to pick it up next.
+
+
+QUESTION 2
